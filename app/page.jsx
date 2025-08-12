@@ -72,11 +72,15 @@ export default function Page(){
 
   const selectTier = (tierKey)=> (e)=>{ setSelectedTier(tierKey); scrollToReserve(e); };
 
-  // HERO & GALLERY IMAGES (high‑quality, fall vibe)
-  const HERO_IMG = "https://images.unsplash.com/photo-1505575972945-338c3fdde2e8?q=80&auto=format&fit=crop&w=2000"; // forested hillside in fall colors
-  const IMG_KAMAKURA = "https://images.unsplash.com/photo-1542860728-7f1d5f3bc2f1?q=80&auto=format&fit=crop&w=1600";   // Kamakura/Enoshima coast vibe
-  const IMG_BEPPU = "https://images.unsplash.com/photo-1602928321437-1b2c1b0c1a2a?q=80&auto=format&fit=crop&w=1600";     // onsen steam
-  const IMG_MIYAJIMA = "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&auto=format&fit=crop&w=1600"; // Miyajima torii at dusk
+ // HERO & GALLERY IMAGES (proxied for reliability)
+const HERO_IMG =
+  "https://images.weserv.nl/?url=images.unsplash.com/photo-1505575972945-338c3fdde2e8&auto=format&fit=crop&w=2000&q=80";
+const IMG_KAMAKURA =
+  "https://images.weserv.nl/?url=images.unsplash.com/photo-1542860728-7f1d5f3bc2f1&auto=format&fit=crop&w=1600&q=80";
+const IMG_BEPPU =
+  "https://images.weserv.nl/?url=images.unsplash.com/photo-1602928321437-1b2c1b0c1a2a&auto=format&fit=crop&w=1600&q=80";
+const IMG_MIYAJIMA =
+  "https://images.weserv.nl/?url=images.unsplash.com/photo-1536098561742-ca998e48cbcc&auto=format&fit=crop&w=1600&q=80";
 
   return (
     <div className="min-h-screen w-full">
