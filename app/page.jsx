@@ -1,1 +1,0 @@
-// Updated landing page code with tier sync, fall theme, photoreal images, LuxeTribes-style UI
