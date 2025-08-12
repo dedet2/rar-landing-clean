@@ -233,12 +233,12 @@ export default function Page() {
     <div className="mt-8 grid gap-6 md:grid-cols-2">
       <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
         <ul className="space-y-2 text-white/80 text-sm">
-          <li>• Lodging & ryokans — <span className="font-medium">$5,200</span></li>
-          <li>• Train & transfers — <span className="font-medium">$900</span></li>
-          <li>• Onsen & wellness experiences — <span className="font-medium">$1,200</span></li>
-          <li>• Two workshops ($1,000 each) — <span className="font-medium">$2,000</span></li>
+          <li>• Lodging & ryokans — <span className="font-medium">$6,200</span></li>
+          <li>• Train & transfers — <span className="font-medium">$1,000</span></li>
+          <li>• Onsen & wellness experiences — <span className="font-medium">$1,500</span></li>
+          <li>• Two workshops ($1,100 each) — <span className="font-medium">$2,200</span></li>
           <li>• White-glove Concierge & hosting — <span className="font-medium">$20,000</span></li>
-          <li className="font-semibold mt-2">Estimated total value — <span className="text-brand-gold">$10,300+</span></li>
+          <li className="font-semibold mt-2">Estimated total value — <span className="text-brand-gold">$30,000+</span></li>
         </ul>
       </div>
       <div className="rounded-3xl border border-brand-gold/60 bg-brand-gold/10 p-6">
