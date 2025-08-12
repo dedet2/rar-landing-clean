@@ -1,0 +1,15 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fall / neutral gradient across full page */
+:root{color-scheme:dark}
+body{@apply bg-gradient-to-b from-[#1b1620] via-[#1a1714] to-[#0e0d0c] text-white antialiased}
+.badge{@apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/20 bg-white/10}
+.btn-primary{@apply rounded-2xl bg-white text-black font-semibold px-6 py-3 hover:bg-white/90 shadow-glow}
+.btn-outline{@apply rounded-2xl border border-white/30 px-6 py-3 hover:bg-white/10}
+.card{@apply rounded-3xl border border-white/10 bg-white/5 p-6}
+.card-alt{@apply rounded-3xl border border-brand-gold/40 bg-brand-gold/10 p-6}
+.section{@apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8}
+hr.section-divider{@apply border-white/10 my-12}
