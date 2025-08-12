@@ -237,7 +237,7 @@ export default function Page() {
           <li>• Train & transfers — <span className="font-medium">$900</span></li>
           <li>• Onsen & wellness experiences — <span className="font-medium">$1,200</span></li>
           <li>• Two workshops ($1,000 each) — <span className="font-medium">$2,000</span></li>
-          <li>• Concierge & hosting — <span className="font-medium">$1,000</span></li>
+          <li>• White-glove Concierge & hosting — <span className="font-medium">$20,000</span></li>
           <li className="font-semibold mt-2">Estimated total value — <span className="text-brand-gold">$10,300+</span></li>
         </ul>
       </div>
