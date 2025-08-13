@@ -1,17 +1,20 @@
-# RAR Landing — Fall DFY Bundle (Full Overwrite)
+# RAR Landing — Fall Theme (DFY v2)
 
-## Deploy
-1) Upload *all files* to your repo root (overwrite). Commit to `main`.
-2) Vercel auto-deploys to Production.
+## Deploy (overwrite)
+1) Upload the **contents** of this ZIP to your GitHub repo root (overwrite).  
+2) Commit to `main`. Vercel auto‑deploys to Production.
 
-## Optional Environment Variables
-- NEXT_PUBLIC_PODIA_BASE_URL — Podia checkout URL. We append UTM + ?tier=.
-- SLACK_WEBHOOK_URL — Incoming webhook; new inquiries ping your Slack.
-- EMAIL_CONTACT — Mailto fallback (default info@incluu.us).
-- NEXT_PUBLIC_GA_ID — GA4 ID (G-XXXXXXXXXX).
-- NEXT_PUBLIC_SITE_URL — Canonical URL for internal UTMs (optional).
+## Optional env vars
+- NEXT_PUBLIC_PODIA_BASE_URL – Podia checkout URL (UTMs + `?tier=` auto‑appended)
+- SLACK_WEBHOOK_URL – Slack incoming webhook for inquiry alerts
+- EMAIL_CONTACT – Mailto fallback (default info@incluu.us)
+- NEXT_PUBLIC_GA_ID – GA4 ID (e.g., G-XXXXXXXXXX)
+- NEXT_PUBLIC_SITE_URL – canonical site URL (optional)
 
-## Notes
-- Full-page fall gradient lives in `styles/globals.css`.
-- Hero & gallery images are sourced via Unsplash with local SVG fallbacks in `public/images`.
-- Buttons set tier + smooth scroll; Podia links include UTM + `?tier=`.
+## What’s inside
+- Full fall gradient across the entire page (no dark bands)
+- Tier cards with gradient backgrounds
+- Hero: Kamakura/Shōnan coast image with overlay for legibility
+- Gallery: Kamakura, Beppu, Miyajima (with SVG fallbacks)
+- Launch pricing: vertical list formatting
+- Tier→Form sync + smooth scroll, Podia UTMs + `?tier=`, Slack + mailto fallback
