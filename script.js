@@ -36,3 +36,27 @@ function updateCountdown() {
 // Kick off countdown updates every second
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// Deposit redirect logic for tier-based checkout
+// Mapping of tier values (from the select dropdown) to Podia checkout URLs.
+const depositLinks = {
+  tier1: 'https://drdede.podia.com/rest-as-resistance-japan-2025-deposit',
+  tier2: 'https://drdede.podia.com/private-indulgence-japan-2025-deposit',
+  tier3: 'https://drdede.podia.com/vip-sanctuary-deposit-japan-2025'
+};
+
+// Attach event listener to the deposit button if it exists
+document.addEventListener('DOMContentLoaded', () => {
+  const depositBtn = document.getElementById('deposit-button');
+  const tierSelect = document.getElementById('tier-select');
+  if (depositBtn && tierSelect) {
+    depositBtn.addEventListener('click', () => {
+      const selectedTier = tierSelect.value;
+      // If a valid tier is selected, redirect to the associated Podia link
+      const url = depositLinks[selectedTier];
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  }
+});

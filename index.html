@@ -353,7 +353,10 @@
           with only three rooms reserved entirely for our group.
         </p>
         <!-- Replace the action URL below with the link to your booking or payment platform -->
-        <form class="reserve-form" action="https://your-booking-provider.com/checkout" method="post">
+        <!-- The deposit form does not submit data to a server; instead the
+             Proceed button triggers a JavaScript redirect to the appropriate
+             Podia checkout page based on the selected tier. -->
+        <form class="reserve-form" onsubmit="return false;">
           <label for="tier-select">Selected Tier</label>
           <select id="tier-select" name="tier-select">
             <option value="tier1">Tier 1 — $7,600</option>
@@ -366,7 +369,7 @@
           <input type="email" id="email" name="email" placeholder="you@example.com" />
           <div class="form-actions">
             <button type="button" class="btn secondary-btn">Send Inquiry</button>
-            <button type="submit" class="btn primary-btn">Proceed to Secure Deposit (Podia)</button>
+            <button type="button" id="deposit-button" class="btn primary-btn">Proceed to Secure Deposit (Podia)</button>
           </div>
         </form>
       </div>
