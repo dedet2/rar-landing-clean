@@ -2,27 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Deep fall gradient (plum → chestnut → charcoal) */
-:root{ color-scheme: dark }
-body{
-  @apply text-white antialiased bg-gradient-to-b from-[#2b1842] via-[#3a2416] to-[#0f0e10];
-}
+/* Fall / neutral gradient for entire page */
+:root { color-scheme: dark; }
+body { @apply min-h-screen bg-gradient-to-b from-fall-deep via-fall-ember to-black text-white antialiased; }
 
-/* Reusable UI */
-.badge{ @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/20 bg-white/10 }
-.btn-primary{ @apply rounded-xl bg-[#F1C376] text-black font-semibold px-4 py-2 text-sm hover:bg-[#eaba69] shadow-glow }
-.btn-outline{ @apply rounded-xl border border-white/30 px-4 py-2 text-sm hover:bg-white/10 }
-.btn-ghost-gold{ @apply rounded-xl border border-[#C08A3E] text-[#F1C376] px-4 py-2 text-sm font-semibold hover:bg-[#C08A3E]/10 }
-.card{ @apply rounded-3xl border border-white/10 bg-white/5 p-6 }
-.card-alt{ @apply rounded-3xl border border-[#C08A3E]/40 bg-[#C08A3E]/10 p-6 }
-.section{ @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 }
-hr.section-divider{ @apply border-white/10 my-12 }
-
-/* Tier cards – subtle fall tints */
-.tier-1{ background:#2a241f }        /* cocoa */
-.tier-2{ background:#3a2f26; border-color:#d6b38a }  /* warm tan */
-.tier-3{ background:#2e2620 }        /* dark chestnut */
-.tier-hover:hover{ filter: brightness(1.05); }
-
-/* Gallery images */
-.gallery-img{ @apply rounded-2xl border border-white/10 object-cover w-full h-56 }
+.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+.badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/20 bg-white/10; }
+.btn { @apply rounded-xl font-semibold px-4 py-2; }
+.btn-primary { @apply btn bg-white text-black hover:bg-white/90 shadow-glow; }
+.btn-outline { @apply btn border border-white/30 hover:bg-white/10; }
+.card { @apply rounded-3xl border border-white/10 bg-white/5 p-6; }
+.card-alt { @apply rounded-3xl border border-brand-gold/40 bg-brand-gold/10 p-6; }
+hr.section-divider { @apply border-white/10 my-12; }
