@@ -28,8 +28,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts: Use a single sans‑serif family for a modern feel -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome for icons -->
@@ -61,14 +62,14 @@
           and liberation.
         </p>
         <div class="badges">
-          <span class="badge"><i class="fa-solid fa-user-group"></i> Only 6 client
+          <span class="badge"><i class="fa-solid fa-user-group"></i> 6–8 client
             spots</span>
           <span class="badge"><i class="fa-solid fa-star"></i> White‑glove
             concierge</span>
           <span class="badge"><i class="fa-solid fa-bolt"></i> Early‑Bird live</span>
         </div>
         <div class="countdown-wrapper">
-          <p class="countdown-label">Early‑Bird — lock your rate while spots last.</p>
+          <p class="countdown-label">Early‑bird pricing available until September 15, 2025.</p>
           <div class="countdown" id="countdown">
             <div class="time-box"><span id="days">00</span><small>Days</small></div>
             <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
@@ -142,40 +143,47 @@
     <section id="itinerary" class="section itinerary-section">
       <div class="container">
         <h2 class="section-heading">Itinerary Highlights</h2>
-        <div class="itinerary-grid">
-          <div class="itinerary-card">
-            <h4>Days 1–2 — Tokyo Arrival & Intention Setting</h4>
-            <p>
-              Evening arrival, gentle start, slow morning. Intention‑setting circle
-              and restorative dinner.
-            </p>
+        <!-- Use image‑backed panels to evoke each destination -->
+        <div class="itinerary-items">
+          <!-- Tokyo arrival & intention setting -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/hero.jpg');"></div>
+            <div class="itinerary-text">
+              <h4>Days 1–2 — Tokyo Arrival & Intention Setting</h4>
+              <p>Evening arrival, gentle start, slow morning. Intention‑setting circle and restorative dinner.</p>
+            </div>
           </div>
-          <div class="itinerary-card">
-            <h4>Days 3–4 — Kamakura Serenity</h4>
-            <p>
-              Private 3‑room heritage home booked entirely for our group. Shichirigahama
-              onsen ritual & forest bathing.
-            </p>
+          <!-- Kamakura -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/kamakura.jpg');"></div>
+            <div class="itinerary-text">
+              <h4>Days 3–4 — Kamakura Serenity</h4>
+              <p>Private three‑room heritage home booked entirely for our group. Shichirigahama onsen ritual & forest bathing.</p>
+            </div>
           </div>
-          <div class="itinerary-card">
-            <h4>Day 5–6 — Beppu Hot Springs</h4>
-            <p>
-              Onsen capital. Sand baths, mud baths and a complimentary 60‑min
-              treatment.
-            </p>
+          <!-- Beppu -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/beppu.jpg');"></div>
+            <div class="itinerary-text">
+              <h4>Days 5–6 — Beppu Hot Springs</h4>
+              <p>Japan’s onsen capital. Enjoy sand baths, mud baths and a complimentary 60‑minute treatment.</p>
+            </div>
           </div>
-          <div class="itinerary-card">
-            <h4>Days 7–8 — Miyajima — Iwaso Ryokan</h4>
-            <p>
-              Iconic island, torii gate views, multi‑course kaiseki. Deep rest with
-              caretaking hospitality.
-            </p>
+          <!-- Miyajima -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/miyajima.jpg');"></div>
+            <div class="itinerary-text">
+              <h4>Days 7–8 — Miyajima — Iwaso Ryokan</h4>
+              <p>Iconic island, torii gate views and multi‑course kaiseki. Deep rest with caretaking hospitality at Iwaso Ryokan.</p>
+            </div>
           </div>
-          <div class="itinerary-card">
-            <h4>Days 9–10 — Return Tokyo & Depart</h4>
-            <p>
-              Integration time, optional shopping, depart for U.S.
-            </p>
+          <!-- Return -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/hero.jpg');"></div>
+            <div class="itinerary-text">
+              <h4>Days 9–10 — Return to Tokyo & Depart</h4>
+              <p>Integration time, optional shopping and farewell dinner before departure for the U.S.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -227,24 +235,23 @@
       </div>
     </section>
 
-    <!-- Value section -->
-    <section id="value" class="section value-section">
-      <div class="container value-container">
-        <h2 class="section-heading">Your Investment, Maximized Value</h2>
-        <div class="value-grid">
-          <div class="value-card">
+    <!-- What's included & workshops section -->
+    <section id="inclusions" class="section inclusions-section">
+      <div class="container">
+        <h2 class="section-heading">What’s Included & Workshops</h2>
+        <div class="inclusions-grid">
+          <div class="inclusion-card">
             <h4>What’s Included</h4>
             <ul>
               <li>Hotels & traditional ryokans (shared at Sakura Sakura)</li>
               <li>All intercity transport + luggage forwarding</li>
               <li>Onsen experiences in Shichirigahama & Beppu</li>
               <li>Iwaso Ryokan stay on Miyajima</li>
-              <li>Two live workshops on wellness & rest</li>
               <li>White‑glove concierge & host team</li>
             </ul>
           </div>
-          <div class="value-card">
-            <h4>Workshops: Rest as Resistance</h4>
+          <div class="inclusion-card">
+            <h4>Rest as Resistance Workshops</h4>
             <ul>
               <li>Workshop 1: The Politics & Practice of Rest</li>
               <li>Workshop 2: Embodied Stillness & Care</li>
@@ -256,16 +263,35 @@
               <li>Flexible opt‑out culture; slow mornings; quiet hour daily</li>
             </ul>
           </div>
-          <div class="value-card">
-            <h4>Value Breakdown</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value section -->
+    <section id="value" class="section value-section">
+      <div class="container value-container">
+        <h2 class="section-heading">Your Investment, Maximized Value</h2>
+        <div class="value-panels">
+          <!-- Cost breakdown -->
+          <div class="value-panel breakdown-panel">
             <ul>
-              <li>Lodging & ryokans — $6,200</li>
-              <li>Train & transfers — $1,000</li>
-              <li>Onsen & wellness experiences — $1,500</li>
-              <li>Two workshops — $1,100 each</li>
-              <li>White‑glove concierge & hosting — $20,000</li>
+              <li>Lodging & ryokans — <span>$6,200</span></li>
+              <li>Train & transfers — <span>$1,000</span></li>
+              <li>Onsen & wellness experiences — <span>$1,500</span></li>
+              <li>Two workshops ($1,100 each) — <span>$2,200</span></li>
+              <li>White‑glove concierge & hosting — <span>$20,000</span></li>
             </ul>
             <p class="value-total">Estimated total value — <strong>$30,000+</strong></p>
+          </div>
+          <!-- Pricing & CTA -->
+          <div class="value-panel pricing-panel">
+            <h4>Launch pricing</h4>
+            <ul>
+              <li>Tier 1 — $7,600</li>
+              <li>Tier 2 — $10,100</li>
+              <li>Tier 3 — $12,400</li>
+            </ul>
+            <a href="#reserve" class="btn primary-btn reserve-now-btn">Reserve Now</a>
           </div>
         </div>
       </div>

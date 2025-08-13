@@ -1,13 +1,14 @@
 # Rest as Resistance — Japan 2025
 
-This repository contains a complete static build for **Dr. Dédé’s** inaugural “Rest as Resistance” luxury healing journey in Japan. The site is designed to be deployed on a static host such as Vercel or GitHub Pages and draws inspiration from the client’s existing landing pages and marketing materials.
+This repository contains a complete **static** build for **Dr. Dédé’s** inaugural “Rest as Resistance” luxury healing journey in Japan. The site is designed to be deployed on a static host such as Vercel or GitHub Pages and draws inspiration from the client’s existing landing pages and marketing materials.
 
 ## Features
 
-* **Soft, restorative palette:** A calming combination of deep greens, teals and pastel neutrals evokes the serene landscapes of Japan. The design is inspired by the Gamma presentation provided and is fully responsive across devices.
-* **Hero section with countdown:** A full‑width hero image sets the mood and includes a live countdown to the journey’s start date.
-* **Timeline & experiences:** A four‑step timeline introduces each phase of the journey—from Kamakura serenity through Shichirigahama healing and Beppu immersion to the sacred finale on Miyajima Island. Dedicated sections highlight onsen rituals, forest‑bathing practices and nourishment & nurturing.
-* **Value breakdown & tiered pricing:** Clear cards outline the three packages—Essential, Private Indulgence and VIP Sanctuary—with detailed inclusions and transparent value breakdown.
+* **Dark, luxurious palette:** Deep purples, forest greens and warm golds evoke a moody autumnal Japan. Photorealistic imagery of lakes, torii gates and misty hot springs (generated specifically for this page) anchor each section.
+* **Hero section with countdown:** A full‑width hero image sets the mood and includes a live countdown to the **early‑bird** deadline (September 15 2025) to encourage timely bookings. Badge text notes there are **6–8 client spots** available.
+* **Image‑driven itinerary:** Each itinerary highlight pairs copy with a photorealistic image of the destination (Tokyo, Kamakura, Beppu, Miyajima). This layout gives visitors a vivid sense of the experience.
+* **Inclusions & workshops:** A dedicated section lists what’s included (hotels & ryokans, transport, onsen rituals, Iwaso stay and concierge) alongside details of the Rest as Resistance workshops and good‑to‑know cultural tips.
+* **Value breakdown & pricing:** Two panels summarise the estimated total value of the trip and the tiered launch pricing (Tier 1 $7,600; Tier 2 $10,100; Tier 3 $12,400) with a clear call‑to‑action.
 * **Inquiry and deposit form:** A simple form allows guests to send an enquiry or proceed to secure their deposit (replace the form `action` with your booking provider, e.g. Podia).
 * **Citations:** Inline footnotes cite authoritative sources on forest bathing, onsen culture, Beppu’s springs and Iwaso Ryokan【28705490375020†L387-L419】【654498561893934†L28-L37】【751175373135778†L49-L60】【652895566235836†L101-L110】.
 
@@ -26,10 +27,10 @@ rest_as_resistance_full_build/
 
 ## Deployment
 
-1. Replace placeholder images in the `images/` directory with high‑resolution photos that reflect the mood of your retreat. Ensure they’re optimized for the web.
-2. Update the early‑bird expiry date in `script.js` if necessary.
+1. The `images/` directory contains photorealistic hero and destination images generated for the December retreat. You can swap them out with your own high‑resolution photos by replacing the files (e.g. `hero.jpg`, `kamakura.jpg`, `beppu.jpg`, `miyajima.jpg`). Ensure they’re optimized for the web.
+2. If you adjust the early‑bird date, edit the `targetDate` constant in `script.js` (currently set to `2025‑09‑15T00:00:00‑07:00`).
 3. If you use a form provider (e.g. Podia, Typeform), set the `action` attribute of the form in `index.html` accordingly.
-4. Commit and push the folder to your GitHub repository, then connect the repo to Vercel. The included `vercel.json` uses [`cleanUrls`](https://vercel.com/docs/concepts/edge-network/clean-urls) to serve the site without `.html` extensions.
+4. Deploy this directory as a **static site**. On Vercel, create a new project and select this directory as the root. When configuring, choose the “Other” framework and **do not** set a build command—this tells Vercel to serve the HTML directly. Alternatively, adjust your existing project’s root directory to point to this folder. The included `vercel.json` uses [`cleanUrls`](https://vercel.com/docs/concepts/edge-network/clean-urls) to serve the site without `.html` extensions.
 
 ## Notes
 

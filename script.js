@@ -1,7 +1,8 @@
 // Countdown timer script for Rest as Resistance — Japan 2025
 
 // Set the early‑bird expiration date (ISO format). Adjust as needed.
-const targetDate = new Date('2025-10-01T00:00:00');
+// Early‑bird pricing ends on 15 September 2025 at midnight PST
+const targetDate = new Date('2025-09-15T00:00:00-07:00');
 
 function updateCountdown() {
   const now = new Date();
