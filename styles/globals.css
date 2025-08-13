@@ -1,27 +1,19 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root { color-scheme: dark; }
+:root{color-scheme:dark}
 body{
   @apply text-white antialiased;
-  background: radial-gradient(1200px 600px at 20% 0%, #3d2451 0%, rgba(61,36,81,.0) 55%),
-              radial-gradient(900px 500px at 85% 10%, #5a2a4a 0%, rgba(90,42,74,.0) 50%),
-              linear-gradient(to bottom,
-                #1a1318 0%,
-                #24171b 22%,
-                #2b1c1a 46%,
-                #3a251c 66%,
-                #4a2e1f 78%,
-                #231517 100%);
+  background: linear-gradient(180deg,#2b0b34 0%, #3B0A45 10%, #1a1023 25%, #0D3B2E 55%, #123f31 70%, #0e0d0c 80%, #1b130d 88%, #A97142 100%);
+  min-height: 100vh;
 }
-.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
-.badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/15 bg-white/10; }
-.btn-primary { @apply rounded-2xl bg-white text-black font-semibold px-5 py-2.5 hover:bg-white/90 shadow; }
-.btn-outline { @apply rounded-2xl border border-white/25 px-5 py-2.5 hover:bg-white/10; }
-.card      { @apply rounded-3xl border border-white/10 bg-white/5 p-6; }
-.card-warm { @apply rounded-3xl border border-white/10 bg-[#3a2f26]/70 p-6; }
-.card-gold { @apply rounded-3xl border border-[#d6b38a]/40 bg-[#3a2f26]/60 p-6; }
-.strip     { @apply border-y border-white/10 bg-white/5; }
-.gallery-img{ @apply rounded-2xl border border-white/10 object-cover w-full h-56; }
-.fallback-box{ @apply rounded-2xl border border-white/10 flex items-center justify-center text-xs text-white/70; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
+.badge{@apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/20 bg-white/10}
+.btn-primary{@apply rounded-2xl bg-white text-black font-semibold px-6 py-3 hover:bg-white/90 shadow-glow}
+.btn-outline{@apply rounded-2xl border border-white/30 px-6 py-3 hover:bg-white/10}
+.card{@apply rounded-3xl border border-white/10 bg-white/5 p-6}
+.card-alt{@apply rounded-3xl border border-brand-gold/40 bg-brand-gold/10 p-6}
+.section{@apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8}
+hr.section-divider{@apply border-white/10 my-12}
+.img-shell{ @apply relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#3B0A45]/70 via-[#0D3B2E]/60 to-[#A97142]/40; }
+.img-shell .fallback{ @apply absolute inset-0 grid place-items-center text-white/60 text-xs; }
+.img-shell img{ width:100%; height:100%; object-fit:cover; display:block; }
