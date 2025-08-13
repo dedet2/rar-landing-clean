@@ -9,7 +9,8 @@ This repository contains a complete **static** build for **Dr. Dédé’s** ina
 * **Image‑driven itinerary:** Each itinerary highlight pairs copy with a photorealistic image of the destination (Tokyo, Kamakura, Beppu, Miyajima). This layout gives visitors a vivid sense of the experience.
 * **Inclusions & workshops:** A dedicated section lists what’s included (hotels & ryokans, transport, onsen rituals, Iwaso stay and concierge) alongside details of the Rest as Resistance workshops and good‑to‑know cultural tips.
 * **Value breakdown & pricing:** Two panels summarise the estimated total value of the trip and the tiered launch pricing (Tier 1 $7,600; Tier 2 $10,100; Tier 3 $12,400) with a clear call‑to‑action.
-* **Inquiry and deposit form:** A simple form allows guests to send an enquiry or proceed to secure their deposit (replace the form `action` with your booking provider, e.g. Podia).
+* **Inquiry and deposit form:** A simple form allows guests to send an enquiry or proceed to secure their deposit (replace the form’s `action` attribute with your booking provider URL, e.g. Podia).  The form now includes guidance for connecting to your payment platform.
+* **Testimonials & FAQs:** A new testimonials section features quotes from past guests, while a succinct FAQ answers common questions about who this trip is for, what’s included, how to book and cancellation policies.
 * **Citations:** Inline footnotes cite authoritative sources on forest bathing, onsen culture, Beppu’s springs and Iwaso Ryokan【28705490375020†L387-L419】【654498561893934†L28-L37】【751175373135778†L49-L60】【652895566235836†L101-L110】.
 
 ## Structure
