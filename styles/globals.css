@@ -1,49 +1,23 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Dark UI with continuous fall gradient */
-:root{color-scheme:dark}
-html,body{height:100%}
-body{
-  --fall-grad: linear-gradient(180deg,
-     #2b1540 0%,
-     #3a1d49 12%,
-     #2b1f3d 22%,
-     #1d2d2a 38%,
-     #17352f 55%,
-     #1e3c34 70%,
-     #2c3e33 82%,
-     #7b5a30 92%,
-     #b6864a 100%);
-  background: var(--fall-grad);
-  color: white;
-  @apply antialiased;
+:root { color-scheme: dark; }
+body {
+  @apply text-white antialiased;
+  background: linear-gradient(180deg, #241437 0%, #1a2d28 40%, #173a31 60%, #b88746 100%);
+  min-height: 100vh;
 }
-
-/* Do not override with section backgrounds; keep transparent to let gradient show through */
-section, header, footer { background: transparent; }
-
-.badge{@apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold border border-white/20 bg-white/10}
-.btn-primary{@apply rounded-2xl bg-white text-black font-semibold px-6 py-3 hover:bg-white/90 shadow-glow}
-.btn-outline{@apply rounded-2xl border border-white/30 px-6 py-3 hover:bg-white/10}
-
-.card{@apply rounded-3xl border border-white/10 bg-white/5 p-6}
-.card-tier{
-  background: linear-gradient(135deg, rgba(67,32,74,.85) 0%, rgba(28,58,53,.85) 58%, rgba(182,134,74,.85) 110%);
-  @apply rounded-3xl border border-white/10 p-6;
-}
-.section{@apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8}
-hr.section-divider{@apply border-white/10 my-12}
-.overlay-gradient{
-  background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,.25) 100%);
-}
-.gallery-fallback{
-  background: radial-gradient(1200px 500px at 10% 0%,
-    rgba(67,32,74,.75) 0%, rgba(28,58,53,.75) 55%, rgba(182,134,74,.75) 100%);
-  @apply rounded-2xl border border-white/10 w-full h-56 flex items-center justify-center text-white/70 text-xs;
-}
-/* Inputs */
-input, select{
-  @apply rounded-xl bg-black/30 border border-white/20 px-4 py-3 w-full;
-}
+.badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/20 bg-white/10; }
+.btn-primary { @apply rounded-2xl bg-white text-black font-semibold px-6 py-3 hover:bg-white/90 shadow-glow; }
+.btn-outline { @apply rounded-2xl border border-white/30 px-6 py-3 hover:bg-white/10; }
+.card { @apply rounded-3xl border border-white/10 bg-white/5 p-6; }
+.tier-card { @apply rounded-3xl p-6 border; border-color: rgba(255,255,255,.15); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); }
+.tier-cta { @apply w-full text-center rounded-xl px-4 py-3 font-semibold; }
+.tier-cta-primary { @apply bg-white text-black hover:bg-white/90; }
+.tier-cta-outline { @apply border border-white/30 hover:bg-white/10; }
+.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+.hero-image { @apply absolute inset-0 object-cover w-full h-full opacity-30; }
+.gallery-img { @apply w-full h-56 md:h-64 object-cover rounded-2xl border border-white/10; }
+hr.section-divider { @apply border-white/10 my-12; }
