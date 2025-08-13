@@ -1,1 +1,1 @@
-module.exports={reactStrictMode:true,eslint:{ignoreDuringBuilds:true},images:{unoptimized:true}};
+module.exports={reactStrictMode:true,eslint:{ignoreDuringBuilds:true}};

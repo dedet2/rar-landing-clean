@@ -1,7 +1,7 @@
 {
   "name": "rar-landing",
   "private": true,
-  "version": "3.0.0",
+  "version": "2.1.2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

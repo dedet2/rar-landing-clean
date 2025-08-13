@@ -1,12 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Full-page fall / neutral gradient */
 :root { color-scheme: dark; }
-
-/* Deep purples/reds/browns gradient across the WHOLE page */
-body {
+body{
   @apply text-white antialiased;
   background: radial-gradient(1200px 600px at 20% 0%, #3d2451 0%, rgba(61,36,81,.0) 55%),
               radial-gradient(900px 500px at 85% 10%, #5a2a4a 0%, rgba(90,42,74,.0) 50%),
@@ -18,24 +15,13 @@ body {
                 #4a2e1f 78%,
                 #231517 100%);
 }
-
-/* Re‑tone surface elements so the gradient reads through */
+.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
 .badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold border border-white/15 bg-white/10; }
 .btn-primary { @apply rounded-2xl bg-white text-black font-semibold px-5 py-2.5 hover:bg-white/90 shadow; }
 .btn-outline { @apply rounded-2xl border border-white/25 px-5 py-2.5 hover:bg-white/10; }
-
-.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
-
-/* Cards get warm translucent tones */
 .card      { @apply rounded-3xl border border-white/10 bg-white/5 p-6; }
 .card-warm { @apply rounded-3xl border border-white/10 bg-[#3a2f26]/70 p-6; }
 .card-gold { @apply rounded-3xl border border-[#d6b38a]/40 bg-[#3a2f26]/60 p-6; }
-
-/* Strips keep subtle contrast without breaking the gradient */
-.strip { @apply border-y border-white/10 bg-white/5; }
-
-/* Gallery placeholders (shown only if an image fails) */
-.img-fallback {
-  @apply flex items-center justify-center text-xs text-white/70 rounded-2xl border border-white/10;
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-}
+.strip     { @apply border-y border-white/10 bg-white/5; }
+.gallery-img{ @apply rounded-2xl border border-white/10 object-cover w-full h-56; }
+.fallback-box{ @apply rounded-2xl border border-white/10 flex items-center justify-center text-xs text-white/70; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
