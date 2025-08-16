@@ -37,6 +37,12 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+// Display remaining guest spots. By default there are 8 spots; adjust this number as sales occur. In the future this could be dynamic.
+document.addEventListener('DOMContentLoaded', () => {
+  const guestEl = document.getElementById('guest-spots');
+  if (guestEl) guestEl.textContent = '8';
+});
+
 // Deposit redirect logic for tier-based checkout
 // Mapping of tier values (from the select dropdown) to Stripe checkout URLs.
 // These payment links were provided by the client and replace the

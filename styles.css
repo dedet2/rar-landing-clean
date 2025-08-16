@@ -44,6 +44,8 @@ body {
   background-color: var(--bg);
   color: var(--primary-text);
   line-height: 1.6;
+  /* Ensure the page is responsive on mobile devices */
+  overflow-x: hidden;
 }
 
 a {
@@ -95,9 +97,10 @@ a {
   background-position: center center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   color: var(--primary-text);
+  padding-left: 2rem;
 }
 .hero-overlay {
   position: absolute;
@@ -113,31 +116,32 @@ a {
   max-width: 800px;
   padding: 1rem 2rem;
   z-index: 1;
+  text-align: left;
 }
 .hero-dates {
   font-size: 0.9rem;
-  color: var(--secondary-text);
+  color: var(--accent-gold);
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
 .hero-title {
   font-family: 'Inter', sans-serif;
-  font-size: 3rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   margin: 0 0 0.5rem;
-}
-.hero-title span {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--accent-gold);
+  color: var(--primary-text);
 }
 .hero-subtitle {
   color: var(--secondary-text);
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 700px;
+}
+.hero-credit {
+  color: var(--secondary-text);
+  font-size: 0.85rem;
+  max-width: 700px;
+  margin-top: 1rem;
 }
 .badges {
   display: flex;
@@ -190,20 +194,7 @@ a {
   text-transform: uppercase;
   color: var(--secondary-text);
 }
-.cta-btn {
-  display: inline-block;
-  background: var(--accent-green);
-  color: var(--primary-text);
-  padding: 0.9rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 1rem;
-  transition: opacity 0.2s ease;
-}
-.cta-btn:hover {
-  opacity: 0.85;
-}
+/* Remove unused hero CTA styles */
 
 /* Section base styles */
 .section {
@@ -433,6 +424,19 @@ a {
   margin-bottom: 1rem;
 }
 
+/* Note heading and signoff styling */
+.note-heading {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.host-signoff {
+  font-style: italic;
+  color: var(--accent-gold);
+  margin-top: 1rem;
+}
+
 /*
  * Display Dr. Dédé’s portraits in a responsive grid. Each image
  * automatically scales to take up one third of the available width on
@@ -634,6 +638,65 @@ a {
   height: 300px;
   object-fit: cover;
   border-radius: var(--border-radius);
+}
+
+/* Add‑ons section layout */
+.addons-section {
+  background: var(--section-bg);
+}
+.addons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.addons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.addons-image {
+  flex: 1 1 300px;
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.addons-list {
+  flex: 2 1 300px;
+  display: flex;
+  align-items: center;
+}
+.addons-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+.addons-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+.addons-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent-purple);
+}
+
+/* Journey names styling */
+.tier-card h3.tier-name {
+  font-size: 1.4rem;
+  color: var(--accent-purple);
+  margin-bottom: 0.4rem;
+}
+
+/* Highlight the estimated value in the value section */
+.highlight-value {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
 }
 
 /* Highlight Senanu social links to indicate they are clickable */
@@ -902,6 +965,18 @@ a {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--accent-gold);
+  position: relative;
+  padding-right: 1.2rem;
+}
+.faq-item h4::after {
+  content: '\25BC';
+  /* downward arrow indicator */
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  transform: translateY(25%);
 }
 .faq-item p {
   margin: 0;
