@@ -246,12 +246,13 @@ a:hover {
 }
 
 .tier-features {
-  list-style: none;
+  list-style-type: disc;
+  padding-left: 1.2rem;
   margin-bottom: 1rem;
 }
 
 .tier-features li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-size: 0.9rem;
 }
 
@@ -378,10 +379,10 @@ a:hover {
 
 .senanu-gallery img {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
   border-radius: 6px;
   object-fit: cover;
-  height: 200px;
+  height: auto;
 }
 
 /* Add-ons section */
@@ -527,10 +528,10 @@ a:hover {
 
 .host-gallery img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   border-radius: 6px;
   object-fit: cover;
-  height: 280px;
+  height: auto;
 }
 
 .credit {
@@ -539,12 +540,45 @@ a:hover {
   opacity: 0.8;
 }
 
+/* Limit hero gratitude note width to match hero description */
+/*
+  The hero gratitude note should wrap at roughly the same width as the
+  subtitle above it. Limit the max‑width so the line length matches
+  the descriptive text and prevents overly long sentences from
+  stretching across the entire hero area on large screens.
+*/
+.hero-credit {
+  display: block;
+  /* Match the subtitle width (550px) so both paragraphs align. */
+  max-width: 550px;
+  /* Add a small top margin to separate from subtitle */
+  margin-top: 0.5rem;
+}
+
 /* Testimonials section */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* Reserve card styling: wrap the reserve form in a gradient card similar to other
+   sections. Provides padding, border, and centred layout */
+.reserve-card {
+  border: 1px solid rgba(212, 166, 64, 0.46);
+  background-image: linear-gradient(
+    160deg,
+    rgba(44, 4, 48, 0.6) 0%,
+    rgba(64, 26, 81, 0.6) 33%,
+    rgba(24, 62, 53, 0.6) 66%,
+    rgba(93, 58, 0, 0.6) 100%
+  );
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  max-width: 800px;
+  margin: 1.5rem auto 0 auto;
 }
 
 .testimonial-card {
@@ -661,16 +695,23 @@ a:hover {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+/*
+  Enlarge the Senanu Kimono and host gallery images slightly while
+  maintaining aspect ratio. A larger max‑width allows the images to
+  occupy more of their container without overflowing the page. They
+  will still scale down responsively on smaller screens. */
 .senanu-gallery img {
   width: 100%;
-  max-width: 200px;
+  /* Increase max width to 250px for equal‑sized, larger thumbnails */
+  max-width: 250px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
 .host-gallery img {
   width: 100%;
-  max-width: 280px;
+  /* Increase host images slightly for a richer gallery view */
+  max-width: 340px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -698,6 +739,11 @@ a:hover {
 @media (max-width: 900px){ .value-panels { grid-template-columns: 1fr; } }
 .breakdown-panel { display:flex; flex-direction:column; justify-content:center; }
 .value-total { margin-bottom: .95rem; }
+
+/* Center‑align the Investment Value section heading */
+.value-section .section-heading {
+  text-align: center;
+}
 
 /* FAQ: add down arrows */
 details.faq-item > summary { position: relative; padding-right: 1.5rem; list-style: none; }
