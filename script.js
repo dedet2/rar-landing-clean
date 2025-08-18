@@ -36,7 +36,7 @@ function updateCountdown() {
 // Dynamic guest spots (update this number as spots fill). The number is
 // displayed in the Early‑Birds section. In a real implementation this
 // could be fetched from a database.
-let spotsRemaining = 6;
+let spotsRemaining = 5;
 function updateSpots() {
   const spotsEl = document.getElementById('spots-left');
   if (spotsEl) {
