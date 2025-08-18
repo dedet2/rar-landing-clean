@@ -1,0 +1,524 @@
+<!--
+  Rest as Resistance — Japan 2025
+
+  This version of the sales page restores the rich gradient aesthetic of the
+  original Tailwind build while incorporating all requested copy and layout
+  changes. The page is written in plain HTML and CSS for easy deployment
+  without a build step. It includes a separate Early‑Birds section with a
+  live countdown, a reworked itinerary grid, expanded Healing Waters & Forest
+  Rituals offerings, renamed pricing tiers (now “Journeys”), updated
+  add‑ons, collapsible FAQs, a personal message from Dr Dédé, and credit to
+  Tricia Hersey. All text follows American English conventions.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest as Resistance — Japan 2025</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-dedV5XWLgf+V7RWLgv6HkI8pZwK4C6Iw20s9d6B9tC5vQtVgZIv7oKOZjXtt3m46xdtPKKcRgo58Hwj5uxxt2Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">Rest as Resistance — Japan 2025</div>
+      <a href="#reserve" class="reserve-btn">Reserve Your Spot</a>
+    </nav>
+
+    <!-- Hero section -->
+    <header id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-dates">Dec 8–17, 2025 · Tokyo · Kamakura · Beppu · Miyajima</p>
+        <h1 class="hero-title">
+          Dr. Dédé’s Rest as Resistance Retreat
+        </h1>
+        <p class="hero-subtitle">
+          A luxury healing experience in Japan for Black women reclaiming rest as a right. Bask in slow mornings, onsen rituals, forest
+          bathing and ryokan care—mindfully crafted for deep restoration, community, and liberation. Space is limited; reserve your
+          spot today. We’ve kept this experience intentionally intimate, making sure every guest is pampered and poured into,
+          receiving the attention, care, and joy they deserve—regardless of their chosen package.
+        </p>
+        <!-- Credit to Tricia Hersey moved from host section -->
+        <p class="credit hero-credit"><em>With gratitude to <a href="https://www.amazon.com/Tricia-Hersey/e/B0BDYNG6JR/ref=aufs_dp_fta_an_dsk" target="_blank">Tricia Hersey</a>, also known as the Nap Bishop of The Nap Ministry and author of <cite>Rest Is Resistance</cite>. Her pioneering work demonstrates how resting can be an act of resistance and liberation.</em></p>
+      </div>
+    </header>
+
+    <!-- Early‑Birds section -->
+    <section id="earlybirds" class="section earlybird-section">
+      <div class="container earlybird-container">
+        <div class="earlybird-left">
+          <p class="earlybird-text">
+            <strong>Early‑Birds:</strong> secure your rest with a deposit by
+            <span class="highlight">September 15, 2025</span> —
+            <span id="spots-left">5</span> guest spots remaining!
+          </p>
+        </div>
+        <div class="earlybird-right">
+          <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">00</span><small>Days</small></div>
+            <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+            <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+            <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Choose Your Rest Journey section -->
+    
+
+
+    <!-- Itinerary section -->
+    
+
+    <!-- Healing Waters & Forest Rituals section -->
+    
+
+    <!-- Senanu fashion brand section -->
+    
+
+    <!-- Journey add-ons section removed; it will be repositioned later -->
+
+    <!-- Value section -->
+    
+
+    <!-- FAQ section -->
+    
+
+    <!-- Meet Your Host section -->
+    
+
+    <!-- Testimonials section -->
+    
+
+    <!-- Reservation form section -->
+    
+
+    <!-- script relocated to bottom -->
+  <section id="itinerary" class="section itinerary-section">
+      <div class="container">
+        <h2 class="section-heading">Your Restorative Oasis Itinerary</h2>
+        <div class="itinerary-grid">
+          <!-- Day 1–2 card -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/hero.png');"></div>
+            <div class="itinerary-text">
+              <p class="days">Days 1–2</p>
+              <h4 class="place">Tokyo Arrival & Intention Setting</h4>
+              <p class="desc">Evening arrival, gentle start, slow morning. Intention‑setting circle and restorative dinner.</p>
+            </div>
+          </div>
+          <!-- Day 3–4 card -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/kamakura.jpg');"></div>
+            <div class="itinerary-text">
+              <p class="days">Days 3–4</p>
+              <h4 class="place">Kamakura Serenity</h4>
+              <p class="desc">Private three‑room heritage home booked entirely for our group. Shichirigahama onsen ritual & forest bathing.</p>
+            </div>
+          </div>
+          <!-- Day 5–6 card -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/beppu.jpg');"></div>
+            <div class="itinerary-text">
+              <p class="days">Days 5–6</p>
+              <h4 class="place">Beppu Hot Springs</h4>
+              <p class="desc">Japan’s onsen capital. Enjoy sand baths, mud baths and a complimentary 60‑minute treatment.</p>
+            </div>
+          </div>
+          <!-- Day 7–8 card -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/miyajima-from-afar.png');"></div>
+            <div class="itinerary-text">
+              <p class="days">Days 7–8</p>
+              <h4 class="place">Miyajima — Iwaso Ryokan</h4>
+              <p class="desc">Iconic island, torii gate views and multi‑course kaiseki. Deep rest with caretaking hospitality at Iwaso Ryokan.</p>
+            </div>
+          </div>
+          <!-- Day 9–10 card -->
+          <div class="itinerary-item">
+            <div class="itinerary-img" style="background-image: url('images/new_hero.jpg');"></div>
+            <div class="itinerary-text">
+              <p class="days">Days 9–10</p>
+              <h4 class="place">Return to Tokyo & Depart</h4>
+              <p class="desc">Integration time, optional shopping and farewell dinner before departure for the U.S.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="experiences" class="section experiences-section">
+      <div class="container">
+        <h2 class="section-heading">Healing Waters & Forest Rituals</h2>
+        <div class="experience-grid">
+          <!-- Shichirigahama Coastal Onsen -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/starry-soak.png');"></div>
+            <h4>Shichirigahama Coastal Onsen</h4>
+            <p>
+              Private oceanside baths where healing mineral waters meet breathtaking Pacific views. Enjoy golden‑hour sunsets over Mount Fuji while
+              soaking meditatively, and evening soaks under a canopy of stars invite deep relaxation and renewal.
+            </p>
+          </div>
+          <!-- Beppu’s Legendary Hells -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/beppu.jpg');"></div>
+            <h4>Beppu’s Legendary “Hells”</h4>
+            <p>
+              Experience Japan’s most famous hot spring city with private access
+              to the renowned thermal pools and geothermal wonders. Includes
+              personalized mud and sand treatments.
+            </p>
+          </div>
+          <!-- Iwaso Ryokan’s Sacred Waters -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/miyajima.jpg');"></div>
+            <h4>Iwaso Ryokan’s Sacred Waters</h4>
+            <p>
+              Bathe in the centuries‑old healing waters of Miyajima Island while
+              enjoying a traditional tea ceremony and restorative herbal
+              infusions. A truly iconic ryokan experience.
+            </p>
+          </div>
+          <!-- Forest Bathing & Rituals -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/forest-bathing.png');"></div>
+            <h4>Forest Bathing & Rituals</h4>
+            <p>
+              Guided silent walks through ancient groves, breathwork beneath maple canopies,
+              nature journaling and sunrise meditation among bamboo—practices designed to calm the nervous system and honor ancestral
+              connections to the natural world.
+            </p>
+          </div>
+          <!-- Rest as Resistance -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/older-purple-forest.png');"></div>
+            <h4>Rest as Resistance</h4>
+            <ul>
+              <li>Sunset hot spring soaks</li>
+              <li>Meandering forest strolls</li>
+              <li>Solo/guided hikes & shrine visits</li>
+              <li>Afternoon naps & spontaneous karaoke</li>
+              <li>Solo/group ecstatic dance sessions</li>
+              <li>The Politics & Practice of Rest Workshop</li>
+              <li>Embodied Stillness & Care Workshop</li>
+            </ul>
+          </div>
+          <!-- Good‑to‑Know -->
+          <div class="experience-card">
+            <div class="experience-img" style="background-image: url('images/black-women-soaking.png');"></div>
+            <h4>Good‑to‑Know</h4>
+            <ul>
+              <li>Cultural care for hair/skin needs; vetted Black‑traveler tips</li>
+              <li>Onsen etiquette guidance; private or low‑exposure options where possible</li>
+              <li>Flexible opt‑out culture; slow mornings; quiet hour daily</li>
+              <li>Pack modest bathing attire; tattoos may need to be covered</li>
+              <li>Cash is preferred in rural areas; ATMs may be limited</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="senanu" class="section senanu-section">
+      <div class="container senanu-container">
+        <div class="senanu-text">
+          <h2 class="section-heading">Senanu Kimono</h2>
+          <p>
+            Senanu is Dr Dédé’s bespoke kimono brand where Japanese craft meets African aesthetics.
+            Each piece blends silk and wax‑print fabrics, honoring the intertwined histories of two
+            cultures while creating something entirely new. During the retreat you’ll have the
+            opportunity to wear an exclusive Senanu yukata or kimono designed just for your journey.
+          </p>
+          <p>
+            Follow us on <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+            and <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+            to explore more designs and connect with the community.
+          </p>
+        </div>
+        <div class="senanu-gallery">
+          <img src="images/dr_dede_kimono_red.jpg" alt="Red wax‑print kimono" />
+          <img src="images/dr_dede_kimono_blue.jpg" alt="Blue wax‑print kimono" />
+          <img src="images/dr_dede_kimono_back.jpg" alt="Back view of wax‑print kimono" />
+        </div>
+      </div>
+    </section>
+<section id="pricing" class="section tiers-section">
+      <div class="container">
+        <h2 class="section-heading">Choose Your Rest Journey</h2>
+        <p class="section-subheading">Dec 8–17, 2025 · 6–8 guests · 2 hosts</p>
+        <div class="tiers">
+          <!-- Whispering Pines (formerly Journey 1) -->
+          <div class="tier-card">
+            <h3 class="tier-name">Whispering Pines</h3>
+            <p class="tier-price">$7,600</p>
+            <ul class="tier-features">
+              <li>Hand‑picked boutique hotels & ryokans (shared at Sakura Sakura)</li>
+              <li>All intercity transport + luggage forwarding</li>
+              <li>Daily onsen rituals in each city</li>
+              <li>Senanu kimono included in welcome gift (optional add‑on for other journeys)</li>
+              <li>Rest as Resistance workshops & forest bathing experiences</li>
+              <li>Guided cultural experiences & local excursions</li>
+              <li>Group integration circles & journaling prompts</li>
+              <!-- Additional inclusions to enrich Whispering Pines -->
+              <li>Fresh, seasonal breakfasts prepared daily</li>
+              <li>Concierge messaging support throughout your stay</li>
+              <li>Pre‑departure orientation & recommended reading list</li>
+            </ul>
+            <div class="tier-actions">
+              <a href="#reserve" class="btn secondary-btn">Inquiry</a>
+              <a href="https://buy.stripe.com/00wfZh2uq8jH6GG3GV7kc01" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
+            </div>
+          </div>
+          <!-- Golden Crane (formerly Journey 2) -->
+          <div class="tier-card tier-2">
+            <h3 class="tier-name">Golden Crane</h3>
+            <p class="tier-price">$10,100</p>
+            <ul class="tier-features">
+              <li>All Whispering Pines inclusions</li>
+              <li>More private rooming where available</li>
+              <li>Premium dining curation & hosted tea ceremony</li>
+              <li>Priority spa scheduling</li>
+              <li>Optional luxury culinary night (add‑on)</li>
+              <li>Enhanced room amenities & welcome gifts</li>
+              <li>Hosted cultural performances & private tours</li>
+              <!-- Additional inclusions for Golden Crane -->
+              <li>Exclusive kimono styling session with our seamstress</li>
+              <li>Evening meditation or live musical performance</li>
+              <li>Upgraded welcome basket with artisanal treats</li>
+            </ul>
+            <div class="tier-actions">
+              <a href="#reserve" class="btn secondary-btn">Inquiry</a>
+              <a href="https://buy.stripe.com/aFaaEX5GCdE14yy4KZ7kc03" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
+            </div>
+            <p class="tier-note">*Sakura Sakura has 3 rooms reserved for our group; those nights are shared across all journeys.</p>
+          </div>
+          <!-- Eternal Blossom (formerly Journey 3) -->
+          <div class="tier-card tier-3">
+            <h3 class="tier-name">Eternal Blossom</h3>
+            <p class="tier-price">$12,400</p>
+            <ul class="tier-features">
+              <li>All Golden Crane inclusions</li>
+              <li>Best‑available rooms throughout the journey</li>
+              <li>VIP welcome & departure amenities</li>
+              <li>Daily onsen rituals and personalised spa treatments</li>
+              <li>Luxury culinary night included</li>
+              <li>Personalised daily wellness consultations</li>
+              <li>Complimentary deluxe airport transfers</li>
+              <!-- Additional inclusions for Eternal Blossom -->
+              <li>Private chauffeured transport for select excursions</li>
+              <li>One‑on‑one consultation with Dr Dédé</li>
+              <li>Daily tea ceremony with a local tea master</li>
+              <li>Complimentary spa gift package & amenities</li>
+            </ul>
+            <div class="tier-actions">
+              <a href="#reserve" class="btn secondary-btn">Inquiry</a>
+              <a href="https://buy.stripe.com/fZucN53yu0Rf0ii6T77kc05" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Journey Add‑ons section -->
+    <section id="add-ons" class="section addons-section">
+      <div class="container">
+        <h2 class="section-heading">Journey Add‑ons</h2>
+        <!-- Use a two‑column grid for the image and details. -->
+        <div class="addons-grid">
+          <div class="addons-image-placeholder"></div>
+          <div class="inclusion-card">
+            <ul>
+              <li>International airfare to and from Japan</li>
+              <li>Visas</li>
+              <li>Travel insurance (highly recommended)</li>
+              <li>Alcoholic beverages & personal expenses</li>
+              <li>Lunches and dinners on free exploration days</li>
+              <li>Optional spa treatments or onsen add‑ons (TBD at each accommodation)</li>
+              <li>Optional tours and shopping excursions</li>
+              <li>Kimono/Yukata purchases for Whispering Pines and Golden Crane journeys</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="value" class="section value-section">
+      <div class="container value-container">
+        <h2 class="section-heading">Your Journey's Investment Value</h2>
+        <div class="value-panels">
+          <!-- Left breakdown panel with value list and reserve button -->
+          <div class="value-panel breakdown-panel">
+            <ul>
+              <li>Lodging & ryokans — <span>Golden Crane</span></li>
+              <li>Train & transfers — <span>$1,000</span></li>
+              <li>Onsen & wellness experiences — <span>$1,500</span></li>
+              <li>Workshops & rituals — <span>$2,200</span></li>
+              <li>Concierge & hosting — <span>$20,000</span></li>
+            </ul>
+            <p class="value-total">Estimated total value — <strong class="highlight-value">$30,000+</strong></p>
+            <a href="#reserve" class="btn primary-btn reserve-now-btn">Reserve Now</a>
+          </div>
+          <!-- Right image panel -->
+          <div class="value-panel image-panel">
+            <img src="images/mount-misen-fall.png" alt="Mount Misen in fall" />
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="faq" class="section faq-section">
+      <div class="container">
+        <h2 class="section-heading">Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Who is this retreat designed for?</summary>
+            <p>Our Rest as Resistance journey is created for Black women seeking a deeply restorative experience combining Japanese wellness traditions and Black liberation practices. All identities are welcome to apply, but priority and pricing are curated for our primary audience.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What’s included in the price?</summary>
+            <p>Your journey covers lodging, intercity transport, daily onsen rituals, workshops, curated meals and concierge support. International airfare, visas, travel insurance and add‑ons are extra.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I secure my spot?</summary>
+            <p>Click “Pay Deposit” under your preferred journey to submit your deposit via Stripe. You may also submit an inquiry form below; our team will reach out with next steps and payment instructions.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I need to cancel?</summary>
+            <p>We understand plans change. Deposits are refundable up to 90 days before departure, minus a small administrative fee. If you need to cancel after that, we’ll work with you on a case‑by‑case basis.</p>
+          </details>
+          <!-- Additional FAQs added for potential guest questions -->
+          <details class="faq-item">
+            <summary>Do I need to speak Japanese to join?</summary>
+            <p>No prior Japanese language skills are required. Our team and trusted partners speak English and will guide you through cultural etiquette and basic phrases so you feel at ease throughout the journey.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are payment plans available?</summary>
+            <p>Yes. After submitting your initial deposit, we offer flexible installment options for the remaining balance. Our team will work with you to create a payment schedule that supports your budget.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How physically demanding are the activities?</summary>
+            <p>The retreat balances rest with gentle movement. Forest walks, onsen rituals and light excursions can be paced to your comfort, and participation is always optional—your body’s needs come first.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this retreat LGBTQ+ friendly?</summary>
+            <p>Absolutely. We welcome guests of all gender identities and sexual orientations, and strive to cultivate a safe, affirming space for everyone. Our programs celebrate the diversity of our community.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there an age limit to participate?</summary>
+            <p>There is no upper age limit for our retreat. Participants of all ages are welcome as long as they feel comfortable with the travel and gentle activities. We encourage you to consider your own mobility and rest needs, and please reach out if you have any questions to ensure the journey is right for you.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+<section id="host" class="section host-section">
+      <div class="container host-container">
+        <div class="host-text">
+          <h2 class="section-heading">Meet Your Host</h2>
+          <p>
+            Dr Dédé Tetsubayashi is a healer, scholar and advocate who has called
+            Japan home for over fifteen years. Her life’s work sits at the
+            intersection of somatic healing, Black liberation and cultural exchange.
+            Having walked sacred paths and soaked in hidden onsens herself, she
+            brings an insider’s eye and a nurturer’s heart to every detail of this
+            journey.
+          </p>
+          <p>
+            As your host, she curates deeply restorative experiences rooted in
+            Japanese tradition and diasporic Black practices. She will introduce you
+            to her favorite ryokans, demystify onsen etiquette and hold space for
+            you to rest and reconnect. Join her to reclaim rest as a radical act
+            of self‑love and resistance.
+          </p>
+          <h3 class="note-heading">Note from Dr. Dédé</h3>
+          <p>
+            <em>
+              In a world that profits from our exhaustion, choosing rest is revolutionary.
+
+              I'm Dr Dédé Tetsubayashi, and after 15 years in Japan, I've discovered that true innovation
+              begins with deep restoration. As someone who disrupts systems for a living, I know the code
+              that keeps us running on empty—and I know how to break it.
+
+              This December, join me for 10 transformative days where rest becomes resistance. Sacred onsen
+              rituals. Ancient forest bathing. Traditional ryokan experiences curated by someone who calls
+              Japan home.
+
+              You've been coded out of rest. Let me share the blueprint for breaking free.
+
+              Dr Dédé — Your guide to radical rest
+            </em>
+          </p>
+        </div>
+        <div class="host-gallery">
+          <img src="images/dede_blue_kimono.jpg" alt="Dr Dédé in a blue kimono pose with fan" />
+          <img src="images/dede_kimono2.jpg" alt="Dr Dédé in blue kimono with outstretched fan" />
+          <img src="images/dr_dede_dance.jpg" alt="Dr Dédé performing a traditional Japanese dance" />
+        </div>
+      </div>
+    </section>
+<section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <h2 class="section-heading">What Past Guests Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>“This journey completely shifted my relationship to rest. The
+              onsens, the forests and the loving community nourished me in ways
+              I didn’t know I needed.”</p>
+            <p class="author">— Jasmine B.</p>
+          </div>
+          <div class="testimonial-card">
+            <p>“Every detail was handled with such care. Dr Dédé’s warmth and
+              expertise made me feel safe to let go and receive deep healing.”</p>
+            <p class="author">— Tanya M.</p>
+          </div>
+          <div class="testimonial-card">
+            <p>“Rest as Resistance is more than a retreat—it’s a reclamation of
+              our birthright. I returned home rooted and radiant.”</p>
+            <p class="author">— Alyssa R.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="reserve" class="section reserve-section">
+      <div class="container">
+        <h2 class="section-heading">Reserve Your Spot</h2>
+        <p class="reserve-note">
+          Two Kamakura nights are at Sakura Sakura—an intimate heritage home
+          with only three rooms reserved entirely for our group.
+        </p>
+        <div class="reserve-card">
+        <form class="reserve-form">
+          <label for="journey-select">Selected Journey</label>
+          <select id="journey-select" name="journey-select">
+            <option value="whispering-pines">Whispering Pines — $7,600</option>
+            <option value="golden-crane">Golden Crane — $10,100</option>
+            <option value="eternal-blossom">Eternal Blossom — $12,400</option>
+          </select>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Your name" />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn">Send Inquiry</button>
+            <button type="button" id="payment-button" class="btn primary-btn">Reserve Now</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </section>
+    <!-- Load JavaScript at the end of the body to ensure the DOM is ready -->
+    <script src="script.js"></script>
+</body>
+</html>

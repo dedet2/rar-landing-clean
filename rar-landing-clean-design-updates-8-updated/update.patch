@@ -1,0 +1,41 @@
+*** Begin Patch
+*** Update File: index.html
+@@
+-        <a href="#" class="btn primary-btn">Reserve Your Spot</a>
++        <!-- Scroll to reservation form -->
++        <a href="#reserve" class="btn primary-btn">Reserve Your Spot</a>
+
+@@ <!-- Choose Your Tier cards -->
+-              <a class="btn primary-btn" href="#">Pay Deposit</a>
++              <a class="btn primary-btn" href="https://buy.stripe.com/00wfZh2uq8jH6GG3GV7kc01" target="_blank">Pay Deposit</a>
+@@
+-              <a class="btn primary-btn" href="#">Pay Deposit</a>
++              <a class="btn primary-btn" href="https://buy.stripe.com/aFaaEX5GCdE14yy4KZ7kc03" target="_blank">Pay Deposit</a>
+@@
+-              <a class="btn primary-btn" href="#">Pay Deposit</a>
++              <a class="btn primary-btn" href="https://buy.stripe.com/fZucN53yu0Rf0ii6T77kc05" target="_blank">Pay Deposit</a>
+
+@@ <!-- “Your Investment, Maximized Value” section -->
+-            <a href="#" class="btn primary-btn">Reserve Now</a>
++            <!-- Jump to reservation form -->
++            <a href="#reserve" class="btn primary-btn">Reserve Now</a>
+
+@@ <!-- Reservation form section near the bottom -->
+-    <section class="reserve-section">
++    <section class="reserve-section" id="reserve">
+
+*** End Patch
+
+*** Begin Patch
+*** Update File: index.html
+@@ <!-- Somewhere in your narrative copy about the retreat -->
+   <p>
+     Our journey transports you to warm springs and serene groves where you
+     reconnect with yourself and your community.
++  </p>
++  <p class="credit">
++    <em>With gratitude to <a href="https://www.amazon.com/Tricia-Hersey/e/B0BDYNG6JR/ref=aufs_dp_fta_an_dsk" target="_blank">Tricia Hersey</a>,
++    also known as the Nap Bishop of The Nap Ministry and author of <cite>Rest Is Resistance</cite>.
++    Her pioneering work demonstrates how resting can be an act of resistance and liberation.</em>
+   </p>
+*** End Patch
