@@ -770,7 +770,9 @@ details.faq-item > summary::after {
      the top padding to ensure all lines remain visible. Smaller font
      sizes prevent wrapping and keep the retreat name and dates legible. */
   .hero-section { min-height: 65vh; padding-top: 4rem; }
-  .hero-title { font-size: 1.6rem !important; line-height: 1.15; }
+  /* Reduce the hero title further on very small screens so the retreat name
+     fits comfortably on a single line. */
+  .hero-title { font-size: 1.4rem !important; line-height: 1.15; }
   .hero-dates { font-size: 0.95rem !important; }
   .hero-subtitle { font-size: 0.85rem !important; }
 }
