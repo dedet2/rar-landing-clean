@@ -36,7 +36,7 @@ function updateCountdown() {
 // Dynamic guest spots (update this number as spots fill). The number is
 // displayed in the Early‑Birds section. In a real implementation this
 // could be fetched from a database.
-let spotsRemaining = 6;
+let spotsRemaining = 5;
 function updateSpots() {
   const spotsEl = document.getElementById('spots-left');
   if (spotsEl) {
@@ -52,10 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set up payment button logic: redirects to appropriate Stripe deposit
   const paymentBtn = document.getElementById('payment-button');
   const journeySelect = document.getElementById('journey-select');
+  // Map each journey slug to its payment link. Keys correspond to the values
+  // defined in the <select id="journey-select"> element of the reserve form.
   const paymentLinks = {
-    journey1: 'https://buy.stripe.com/00wfZh2uq8jH6GG3GV7kc01',
-    journey2: 'https://buy.stripe.com/aFaaEX5GCdE14yy4KZ7kc03',
-    journey3: 'https://buy.stripe.com/fZucN53yu0Rf0ii6T77kc05'
+    'whispering-pines': 'https://buy.stripe.com/00wfZh2uq8jH6GG3GV7kc01',
+    'golden-crane': 'https://buy.stripe.com/aFaaEX5GCdE14yy4KZ7kc03',
+    'eternal-blossom': 'https://buy.stripe.com/fZucN53yu0Rf0ii6T77kc05'
   };
   if (paymentBtn && journeySelect) {
     paymentBtn.addEventListener('click', () => {

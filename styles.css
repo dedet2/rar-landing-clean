@@ -133,7 +133,9 @@ a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  /* Expand the width of the hero content on larger screens so the title can
+     fit on one line. */
+  max-width: 900px;
 }
 
 .hero-dates {
@@ -619,3 +621,95 @@ a:hover {
     justify-content: flex-start;
   }
 }
+
+/* === DFY: Gradient card + gold outline (Aug 2025) === */
+/* Apply a rich multi‑stop gradient to all non‑image cards. This mirrors the
+   plum‑to‑purple‑to‑forest‑green‑to‑gold colour scheme of the template.
+   The gold outline remains for a luxurious feel. */
+.tier-card, .itinerary-item, .experience-card, .inclusion-card, .value-panel, .faq-item, .testimonial-card {
+  border: 1px solid rgba(212,166,64,.46);
+  /* Four‑stop gradient: plum → purple → forest green → gold. Slight alpha
+     values allow underlying images (where present) to shine through. */
+  background-image: linear-gradient(
+    160deg,
+    rgba(44, 4, 48, 0.6) 0%,
+    rgba(64, 26, 81, 0.6) 33%,
+    rgba(24, 62, 53, 0.6) 66%,
+    rgba(93, 58, 0, 0.6) 100%
+  );
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  border-radius: 12px;
+}
+
+/* Hero title sizing: clamp to ensure it stays on one line on larger screens.
+   The minimum has been reduced and the maximum lowered so the text wraps
+   gracefully on mobile while remaining succinct on desktop. */
+ .hero-title {
+  /* Reduce maximum size so the title fits on one line on desktop. The clamp
+     uses a smaller maximum (2.2rem) and a lower preferred size to keep text
+     compact without sacrificing readability. */
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  line-height: 1.1;
+}
+
+/* Galleries: images constrained to card width; prevent overflow */
+/* Fine‑tune gallery image sizing to prevent overflow on desktop and mobile.
+   Each image has a maximum width and automatically scales down to fit.
+   Heights remain auto so images maintain their aspect ratio and do not
+   extend beyond the accompanying text. */
+.senanu-gallery, .host-gallery {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.senanu-gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.host-gallery img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Add‑on section: arrange the image and details side by side. The first
+   column has been widened to accommodate a larger photo, as requested. */
+.addons-grid { display: grid; grid-template-columns: 420px 1fr; gap: 1.2rem; align-items: start; }
+@media (max-width: 900px){ .addons-grid { grid-template-columns: 1fr; } }
+.addons-image-placeholder {
+  /* Updated to the ryokan view photo for the add‑ons section. */
+  background: url('images/view-from-ryokan.png') center/cover no-repeat;
+  border: 1px solid rgba(212,166,64,.35);
+  border-radius: 12px;
+  min-height: 250px;
+}
+
+/* Increase card padding in Journey Add‑ons for better readability */
+.addons-section .inclusion-card {
+  padding: 1.5rem;
+}
+
+/* Value section: center vertically and add spacing before CTA */
+.value-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 900px){ .value-panels { grid-template-columns: 1fr; } }
+.breakdown-panel { display:flex; flex-direction:column; justify-content:center; }
+.value-total { margin-bottom: .95rem; }
+
+/* FAQ: add down arrows */
+details.faq-item > summary { position: relative; padding-right: 1.5rem; list-style: none; }
+details.faq-item > summary::after {
+  content: '▾'; position: absolute; right: .25rem; top: 0; color:#f4c15d; font-weight:700;
+}
+
+/* Mobile hero responsiveness */
+@media (max-width: 640px){
+  .hero-section { min-height: 60vh; padding-top: 4.5rem; }
+  .hero-title { font-size: 2rem !important; }
+  .hero-dates { font-size: 1.05rem !important; }
+  .hero-subtitle { font-size: .98rem !important; }
+}
+
