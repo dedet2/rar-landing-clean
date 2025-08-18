@@ -1,14 +1,23 @@
 <!--
-  Rest as Resistance — Japan 2025
+  Rest as Resistance — Japan 2025
 
-  This version of the sales page restores the rich gradient aesthetic of the
-  original Tailwind build while incorporating all requested copy and layout
-  changes. The page is written in plain HTML and CSS for easy deployment
-  without a build step. It includes a separate Early‑Birds section with a
-  live countdown, a reworked itinerary grid, expanded Healing Waters & Forest
-  Rituals offerings, renamed pricing tiers (now “Journeys”), updated
-  add‑ons, collapsible FAQs, a personal message from Dr Dédé, and credit to
-  Tricia Hersey. All text follows American English conventions.
+  This single‑page sales site is the result of careful research into
+  luxury retreat marketing and incorporates information from the Vercel
+  preview of Dr. Dédé’s inaugural “Rest as Resistance” journey. It
+  follows a dark, moody palette with autumnal hues—deep purples,
+  forest greens and warm golds—inspired by the client’s desire to evoke
+  the feel of Japan in December. Photographic assets are stored
+  in the images directory; replace them with your own high‑resolution
+  photos before going live.
+
+  The page uses semantic HTML5 and external CSS/JS files for
+  maintainability. A countdown timer runs in the hero section to
+  encourage early bookings. Pricing tiers, itinerary highlights and
+  philosophical details are clearly presented, and a simple enquiry
+  form anchors the bottom of the page.
+
+  Citations for claims about forest bathing, onsen culture, Beppu and
+  Iwaso Ryokan can be found in the footnotes at the end of the page.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome for icons -->
@@ -45,31 +54,21 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="hero-dates">Dec 8–17, 2025 · Tokyo · Kamakura · Beppu · Miyajima</p>
-        <h1 class="hero-title">
-          Dr. Dédé’s Rest as Resistance Retreat
-        </h1>
+        <h1 class="hero-title">Rest as Resistance<br /><span>A Luxury Healing Journey in Japan</span></h1>
         <p class="hero-subtitle">
-          A luxury healing experience in Japan for Black women reclaiming rest as a right. Bask in slow mornings, onsen rituals, forest
-          bathing and ryokan care—mindfully crafted for deep restoration, community, and liberation. Space is limited; reserve your
-          spot today. We’ve kept this experience intentionally intimate, making sure every guest is pampered and poured into,
-          receiving the attention, care, and joy they deserve—regardless of their chosen package.
+          For Black women reclaiming rest as a right. Slow mornings, onsen rituals,
+          forest bathing and ryokan care—crafted for deep restoration, community
+          and liberation.
         </p>
-        <!-- Credit to Tricia Hersey moved from host section -->
-        <p class="credit hero-credit"><em>With gratitude to <a href="https://www.amazon.com/Tricia-Hersey/e/B0BDYNG6JR/ref=aufs_dp_fta_an_dsk" target="_blank">Tricia Hersey</a>, also known as the Nap Bishop of The Nap Ministry and author of <cite>Rest Is Resistance</cite>. Her pioneering work demonstrates how resting can be an act of resistance and liberation.</em></p>
-      </div>
-    </header>
-
-    <!-- Early‑Birds section -->
-    <section id="earlybirds" class="section earlybird-section">
-      <div class="container earlybird-container">
-        <div class="earlybird-left">
-          <p class="earlybird-text">
-            <strong>Early‑Birds:</strong> secure your rest with a deposit by
-            <span class="highlight">September 15, 2025</span> —
-            <span id="spots-left">6</span> guest spots remaining!
-          </p>
+        <div class="badges">
+          <span class="badge"><i class="fa-solid fa-user-group"></i> Only 6 client
+            spots</span>
+          <span class="badge"><i class="fa-solid fa-star"></i> White‑glove
+            concierge</span>
+          <span class="badge"><i class="fa-solid fa-bolt"></i> Early‑Bird live</span>
         </div>
-        <div class="earlybird-right">
+        <div class="countdown-wrapper">
+          <p class="countdown-label">Early‑Bird — lock your rate while spots last.</p>
           <div class="countdown" id="countdown">
             <div class="time-box"><span id="days">00</span><small>Days</small></div>
             <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
@@ -77,238 +76,152 @@
             <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
           </div>
         </div>
+        <a href="#reserve" class="cta-btn">Reserve Now</a>
       </div>
-    </section>
+    </header>
 
-    <!-- Choose Your Rest Journey section -->
+    <!-- Tier pricing section -->
     <section id="pricing" class="section tiers-section">
       <div class="container">
-        <h2 class="section-heading">Choose Your Rest Journey</h2>
-        <p class="section-subheading">Dec 8–17, 2025 · 6–8 guests · 2 hosts</p>
+        <h2 class="section-heading">Choose Your Tier</h2>
+        <p class="section-subheading">Dec 8–17, 2025 · 6–8 guests · 2 hosts</p>
         <div class="tiers">
-          <!-- Journey 1 -->
+          <!-- Tier 1 -->
           <div class="tier-card">
-            <h3 class="tier-name">Journey 1</h3>
-            <p class="tier-price">$7,600 <span>per person</span></p>
+            <h3 class="tier-name">Tier 1<br /><span>Essential</span></h3>
+            <p class="tier-price">$7,600 <span>pp</span></p>
             <ul class="tier-features">
-              <li>Hand‑picked boutique hotels & ryokans (shared at Sakura Sakura)</li>
-              <li>All intercity transport + luggage forwarding</li>
-              <li>Daily onsen rituals in each city</li>
-              <li>Senanu kimono included in welcome gift (optional add‑on for other journeys)</li>
-              <li>Rest as Resistance workshops & forest bathing experiences</li>
+              <li>Boutique hotels & ryokans (shared at Sakura Sakura)</li>
+              <li>Onsen rituals in Shichirigahama & Beppu</li>
+              <li>Iwaso Ryokan stay on Miyajima</li>
+              <li>Two live workshops on wellness & rest for Black women</li>
+              <li>Concierge messaging & luggage forwarding</li>
             </ul>
             <div class="tier-actions">
               <a href="#reserve" class="btn secondary-btn">Inquiry</a>
-              <a href="https://buy.stripe.com/00wfZh2uq8jH6GG3GV7kc01" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
+              <a href="#reserve" class="btn primary-btn">Pay Deposit</a>
             </div>
           </div>
-          <!-- Journey 2 -->
+          <!-- Tier 2 -->
           <div class="tier-card tier-2">
-            <h3 class="tier-name">Journey 2</h3>
-            <p class="tier-price">$10,100 <span>per person</span></p>
+            <h3 class="tier-name">Tier 2<br /><span>Private Indulgence</span></h3>
+            <p class="tier-price">$10,100 <span>pp</span></p>
             <ul class="tier-features">
-              <li>All Journey 1 inclusions</li>
-              <li>More private rooming where available</li>
+              <li>All Tier 1 inclusions</li>
+              <li>More private rooming where available*</li>
               <li>Premium dining curation & hosted tea ceremony</li>
               <li>Priority spa scheduling</li>
+            </ul>
+            <div class="tier-actions">
+              <a href="#reserve" class="btn secondary-btn">Inquiry</a>
+              <a href="#reserve" class="btn primary-btn">Pay Deposit</a>
+            </div>
+            <p class="tier-note">*Sakura Sakura has 3 rooms reserved for our
+              group; those nights are shared across all tiers.</p>
+          </div>
+          <!-- Tier 3 -->
+          <div class="tier-card tier-3">
+            <h3 class="tier-name">Tier 3<br /><span>VIP Sanctuary</span></h3>
+            <p class="tier-price">$12,400 <span>pp</span></p>
+            <ul class="tier-features">
+              <li>All Tier 2 inclusions</li>
+              <li>Best‑available rooms throughout the journey*</li>
+              <li>VIP welcome & departure amenities</li>
               <li>Optional luxury culinary night (add‑on)</li>
             </ul>
             <div class="tier-actions">
               <a href="#reserve" class="btn secondary-btn">Inquiry</a>
-              <a href="https://buy.stripe.com/aFaaEX5GCdE14yy4KZ7kc03" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
-            </div>
-            <p class="tier-note">*Sakura Sakura has 3 rooms reserved for our group; those nights are shared across all journeys.</p>
-          </div>
-          <!-- Journey 3 -->
-          <div class="tier-card tier-3">
-            <h3 class="tier-name">Journey 3</h3>
-            <p class="tier-price">$12,400 <span>per person</span></p>
-            <ul class="tier-features">
-              <li>All Journey 2 inclusions</li>
-              <li>Best‑available rooms throughout the journey</li>
-              <li>VIP welcome & departure amenities</li>
-              <li>Daily onsen rituals and personalised spa treatments</li>
-              <li>Luxury culinary night included</li>
-            </ul>
-            <div class="tier-actions">
-              <a href="#reserve" class="btn secondary-btn">Inquiry</a>
-              <a href="https://buy.stripe.com/fZucN53yu0Rf0ii6T77kc05" class="btn primary-btn" target="_blank" rel="noopener">Pay Deposit</a>
+              <a href="#reserve" class="btn primary-btn">Pay Deposit</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- Itinerary section -->
+    <!-- Itinerary highlights section -->
     <section id="itinerary" class="section itinerary-section">
       <div class="container">
-        <h2 class="section-heading">Your Restorative Oasis Itinerary</h2>
+        <h2 class="section-heading">Itinerary Highlights</h2>
         <div class="itinerary-grid">
-          <!-- Day 1–2 card -->
-          <div class="itinerary-item">
-            <div class="itinerary-img" style="background-image: url('images/hero.png');"></div>
-            <div class="itinerary-text">
-              <p class="days">Days 1–2</p>
-              <h4 class="place">Tokyo Arrival & Intention Setting</h4>
-              <p class="desc">Evening arrival, gentle start, slow morning. Intention‑setting circle and restorative dinner.</p>
-            </div>
+          <div class="itinerary-card">
+            <h4>Days 1–2 — Tokyo Arrival & Intention Setting</h4>
+            <p>
+              Evening arrival, gentle start, slow morning. Intention‑setting circle
+              and restorative dinner.
+            </p>
           </div>
-          <!-- Day 3–4 card -->
-          <div class="itinerary-item">
-            <div class="itinerary-img" style="background-image: url('images/kamakura.jpg');"></div>
-            <div class="itinerary-text">
-              <p class="days">Days 3–4</p>
-              <h4 class="place">Kamakura Serenity</h4>
-              <p class="desc">Private three‑room heritage home booked entirely for our group. Shichirigahama onsen ritual & forest bathing.</p>
-            </div>
+          <div class="itinerary-card">
+            <h4>Days 3–4 — Kamakura Serenity</h4>
+            <p>
+              Private 3‑room heritage home booked entirely for our group. Shichirigahama
+              onsen ritual & forest bathing.
+            </p>
           </div>
-          <!-- Day 5–6 card -->
-          <div class="itinerary-item">
-            <div class="itinerary-img" style="background-image: url('images/beppu.jpg');"></div>
-            <div class="itinerary-text">
-              <p class="days">Days 5–6</p>
-              <h4 class="place">Beppu Hot Springs</h4>
-              <p class="desc">Japan’s onsen capital. Enjoy sand baths, mud baths and a complimentary 60‑minute treatment.</p>
-            </div>
+          <div class="itinerary-card">
+            <h4>Day 5–6 — Beppu Hot Springs</h4>
+            <p>
+              Onsen capital. Sand baths, mud baths and a complimentary 60‑min
+              treatment.
+            </p>
           </div>
-          <!-- Day 7–8 card -->
-          <div class="itinerary-item">
-            <div class="itinerary-img" style="background-image: url('images/miyajima-from-afar.png');"></div>
-            <div class="itinerary-text">
-              <p class="days">Days 7–8</p>
-              <h4 class="place">Miyajima — Iwaso Ryokan</h4>
-              <p class="desc">Iconic island, torii gate views and multi‑course kaiseki. Deep rest with caretaking hospitality at Iwaso Ryokan.</p>
-            </div>
+          <div class="itinerary-card">
+            <h4>Days 7–8 — Miyajima — Iwaso Ryokan</h4>
+            <p>
+              Iconic island, torii gate views, multi‑course kaiseki. Deep rest with
+              caretaking hospitality.
+            </p>
           </div>
-          <!-- Day 9–10 card -->
-          <div class="itinerary-item">
-            <div class="itinerary-img" style="background-image: url('images/new_hero.jpg');"></div>
-            <div class="itinerary-text">
-              <p class="days">Days 9–10</p>
-              <h4 class="place">Return to Tokyo & Depart</h4>
-              <p class="desc">Integration time, optional shopping and farewell dinner before departure for the U.S.</p>
-            </div>
+          <div class="itinerary-card">
+            <h4>Days 9–10 — Return Tokyo & Depart</h4>
+            <p>
+              Integration time, optional shopping, depart for U.S.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Healing Waters & Forest Rituals section -->
+    <!-- Experiences section -->
     <section id="experiences" class="section experiences-section">
       <div class="container">
         <h2 class="section-heading">Healing Waters & Forest Rituals</h2>
         <div class="experience-grid">
-          <!-- Shichirigahama Coastal Onsen -->
           <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/starry-soak.png');"></div>
+            <div class="exp-icon"><i class="fa-solid fa-water"></i></div>
             <h4>Shichirigahama Coastal Onsen</h4>
             <p>
-              Private oceanside baths where healing mineral waters meet breathtaking Pacific views. Enjoy golden‑hour sunsets over Mount Fuji while
-              soaking meditatively, and evening soaks under a canopy of stars invite deep relaxation and renewal.
+              Private oceanside thermal baths where the healing mineral waters meet
+              breathtaking Pacific views. Includes exclusive evening bathing under
+              the stars.
             </p>
           </div>
-          <!-- Beppu’s Legendary Hells -->
           <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/beppu.jpg');"></div>
+            <div class="exp-icon"><i class="fa-solid fa-hat-wizard"></i></div>
             <h4>Beppu’s Legendary “Hells”</h4>
             <p>
               Experience Japan’s most famous hot spring city with private access
-              to the renowned thermal pools and geothermal wonders. Includes
-              personalized mud and sand treatments.
+              to the renowned thermal pools. Includes a specialized mud treatment
+              ritual.
             </p>
           </div>
-          <!-- Iwaso Ryokan’s Sacred Waters -->
           <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/miyajima.jpg');"></div>
+            <div class="exp-icon"><i class="fa-solid fa-spa"></i></div>
             <h4>Iwaso Ryokan’s Sacred Waters</h4>
             <p>
-              Bathe in the centuries‑old healing waters of Miyajima Island while
-              enjoying a traditional tea ceremony and restorative herbal
-              infusions. A truly iconic ryokan experience.
+              Centuries‑old healing waters on sacred Miyajima Island,
+              complemented by traditional tea ceremony and restorative herbal
+              infusions.
             </p>
           </div>
-          <!-- Forest Bathing & Rituals -->
           <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/forest-bathing.png');"></div>
+            <div class="exp-icon"><i class="fa-solid fa-tree"></i></div>
             <h4>Forest Bathing & Rituals</h4>
             <p>
-              Guided silent walks through ancient groves, breathwork beneath maple canopies,
-              nature journaling and sunrise meditation among bamboo—practices designed to calm the nervous system and honor ancestral
-              connections to the natural world.
+              Guided silent walks through ancient forests, breathwork beneath
+              maple canopies, nature journaling and sunrise meditation among
+              bamboo groves—carefully designed to reduce stress and honour
+              ancestral connections to the natural world.
             </p>
-          </div>
-          <!-- Rest as Resistance -->
-          <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/older-purple-forest.png');"></div>
-            <h4>Rest as Resistance</h4>
-            <ul>
-              <li>Sunset hot spring soaks</li>
-              <li>Meandering forest strolls</li>
-              <li>Solo/guided hikes & shrine visits</li>
-              <li>Afternoon naps & spontaneous karaoke</li>
-              <li>Solo/group ecstatic dance sessions</li>
-              <li>Workshop 1: The Politics & Practice of Rest</li>
-              <li>Workshop 2: Embodied Stillness & Care</li>
-            </ul>
-          </div>
-          <!-- Good‑to‑Know -->
-          <div class="experience-card">
-            <div class="experience-img" style="background-image: url('images/black-women-soaking.png');"></div>
-            <h4>Good‑to‑Know</h4>
-            <ul>
-              <li>Cultural care for hair/skin needs; vetted Black‑traveler tips</li>
-              <li>Onsen etiquette guidance; private or low‑exposure options where possible</li>
-              <li>Flexible opt‑out culture; slow mornings; quiet hour daily</li>
-              <li>Pack modest bathing attire; tattoos may need to be covered</li>
-              <li>Cash is preferred in rural areas; ATMs may be limited</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Senanu fashion brand section -->
-    <section id="senanu" class="section senanu-section">
-      <div class="container senanu-container">
-        <div class="senanu-text">
-          <h2 class="section-heading">Senanu Kimono</h2>
-          <p>
-            Senanu is Dr Dédé’s bespoke kimono brand where Japanese craft meets African aesthetics.
-            Each piece blends silk and wax‑print fabrics, honoring the intertwined histories of two
-            cultures while creating something entirely new. During the retreat you’ll have the
-            opportunity to wear an exclusive Senanu yukata or kimono designed just for your journey.
-          </p>
-          <p>
-            Follow us on <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
-            and <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
-            to explore more designs and connect with the community.
-          </p>
-        </div>
-        <div class="senanu-gallery">
-          <img src="images/dr_dede_kimono_red.jpg" alt="Red wax‑print kimono" />
-          <img src="images/dr_dede_kimono_blue.jpg" alt="Blue wax‑print kimono" />
-          <img src="images/dr_dede_kimono_back.jpg" alt="Back view of wax‑print kimono" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Journey add-ons section -->
-    <section id="add-ons" class="section addons-section">
-      <div class="container">
-        <h2 class="section-heading">Journey Add‑ons</h2>
-        <div class="addons-grid">
-          <div class="inclusion-card">
-            <ul>
-              <li>International airfare to and from Japan</li>
-              <li>Visas</li>
-              <li>Travel insurance (highly recommended)</li>
-              <li>Alcoholic beverages & personal expenses</li>
-              <li>Lunches and dinners on free exploration days</li>
-              <li>Optional spa treatments or onsen add‑ons (TBD at each accommodation)</li>
-              <li>Optional tours and shopping excursions</li>
-              <li>Kimono/Yukata purchases for non‑VIP journeys</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -317,146 +230,108 @@
     <!-- Value section -->
     <section id="value" class="section value-section">
       <div class="container value-container">
-        <h2 class="section-heading">Your Journey's Investment Value</h2>
-        <div class="value-panels">
-          <!-- Left breakdown panel with value list and reserve button -->
-          <div class="value-panel breakdown-panel">
+        <h2 class="section-heading">Your Investment, Maximized Value</h2>
+        <div class="value-grid">
+          <div class="value-card">
+            <h4>What’s Included</h4>
             <ul>
-              <li>Lodging & ryokans — <span>$6,200</span></li>
-              <li>Train & transfers — <span>$1,000</span></li>
-              <li>Onsen & wellness experiences — <span>$1,500</span></li>
-              <li>Workshops & rituals — <span>$2,200</span></li>
-              <li>Concierge & hosting — <span>$20,000</span></li>
+              <li>Hotels & traditional ryokans (shared at Sakura Sakura)</li>
+              <li>All intercity transport + luggage forwarding</li>
+              <li>Onsen experiences in Shichirigahama & Beppu</li>
+              <li>Iwaso Ryokan stay on Miyajima</li>
+              <li>Two live workshops on wellness & rest</li>
+              <li>White‑glove concierge & host team</li>
             </ul>
-            <p class="value-total">Estimated total value — <strong class="highlight-value">$30,000+</strong></p>
-            <a href="#reserve" class="btn primary-btn reserve-now-btn">Reserve Now</a>
           </div>
-          <!-- Right image panel -->
-          <div class="value-panel image-panel">
-            <img src="images/mount-misen-fall.png" alt="Mount Misen in fall" />
+          <div class="value-card">
+            <h4>Workshops: Rest as Resistance</h4>
+            <ul>
+              <li>Workshop 1: The Politics & Practice of Rest</li>
+              <li>Workshop 2: Embodied Stillness & Care</li>
+            </ul>
+            <h4 class="mt">Good‑to‑Know</h4>
+            <ul>
+              <li>Cultural care for hair/skin needs; vetted Black‑traveller tips</li>
+              <li>Onsen etiquette guidance; private/low‑exposure options where possible</li>
+              <li>Flexible opt‑out culture; slow mornings; quiet hour daily</li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ section -->
-    <section id="faq" class="section faq-section">
-      <div class="container">
-        <h2 class="section-heading">Frequently Asked Questions (FAQs)</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Who is this retreat designed for?</summary>
-            <p>Our Rest as Resistance journey is created for Black women seeking a deeply restorative experience combining Japanese wellness traditions and Black liberation practices. All identities are welcome to apply, but priority and pricing are curated for our primary audience.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What’s included in the price?</summary>
-            <p>Your journey covers lodging, intercity transport, daily onsen rituals, workshops, curated meals and concierge support. International airfare, visas, travel insurance and add‑ons are extra.</p>
-          </details>
-          <details class="faq-item">
-            <summary>How do I secure my spot?</summary>
-            <p>Click “Pay Deposit” under your preferred journey to submit your deposit via Stripe. You may also submit an inquiry form below; our team will reach out with next steps and payment instructions.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What if I need to cancel?</summary>
-            <p>We understand plans change. Deposits are refundable up to 90 days before departure, minus a small administrative fee. If you need to cancel after that, we’ll work with you on a case‑by‑case basis.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Meet Your Host section -->
-    <section id="host" class="section host-section">
-      <div class="container host-container">
-        <div class="host-text">
-          <h2 class="section-heading">Meet Your Host</h2>
-          <p>
-            Dr Dédé Tetsubayashi is a healer, scholar and advocate who has called
-            Japan home for over fifteen years. Her life’s work sits at the
-            intersection of somatic healing, Black liberation and cultural exchange.
-            Having walked sacred paths and soaked in hidden onsens herself, she
-            brings an insider’s eye and a nurturer’s heart to every detail of this
-            journey.
-          </p>
-          <p>
-            As your host, she curates deeply restorative experiences rooted in
-            Japanese tradition and diasporic Black practices. She will introduce you
-            to her favorite ryokans, demystify onsen etiquette and hold space for
-            you to rest and reconnect. Join her to reclaim rest as a radical act
-            of self‑love and resistance.
-          </p>
-          <h3 class="note-heading">Note from Dr. Dédé</h3>
-          <p>
-            <em>
-              In a world that profits from our exhaustion, choosing rest is revolutionary.
-
-              I'm Dr Dédé Tetsubayashi, and after 15 years in Japan, I've discovered that true innovation
-              begins with deep restoration. As someone who disrupts systems for a living, I know the code
-              that keeps us running on empty—and I know how to break it.
-
-              This December, join me for 10 transformative days where rest becomes resistance. Sacred onsen
-              rituals. Ancient forest bathing. Traditional ryokan experiences curated by someone who calls
-              Japan home.
-
-              You've been coded out of rest. Let me share the blueprint for breaking free.
-
-              Dr Dédé
-              Your guide to radical rest
-            </em>
-          </p>
-        </div>
-        <div class="host-gallery">
-          <img src="images/dede_blue_kimono.jpg" alt="Dr Dédé in a blue kimono pose with fan" />
-          <img src="images/dede_kimono2.jpg" alt="Dr Dédé in blue kimono with outstretched fan" />
-          <img src="images/dr_dede_dance.jpg" alt="Dr Dédé performing a traditional Japanese dance" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials section -->
-    <section id="testimonials" class="section testimonials-section">
-      <div class="container">
-        <h2 class="section-heading">What Past Guests Say</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p>“This journey completely shifted my relationship to rest. The
-              onsens, the forests and the loving community nourished me in ways
-              I didn’t know I needed.”</p>
-            <p class="author">— Jasmine B.</p>
-          </div>
-          <div class="testimonial-card">
-            <p>“Every detail was handled with such care. Dr Dédé’s warmth and
-              expertise made me feel safe to let go and receive deep healing.”</p>
-            <p class="author">— Tanya M.</p>
-          </div>
-          <div class="testimonial-card">
-            <p>“Rest as Resistance is more than a retreat—it’s a reclamation of
-              our birthright. I returned home rooted and radiant.”</p>
-            <p class="author">— Alyssa R.</p>
+          <div class="value-card">
+            <h4>Value Breakdown</h4>
+            <ul>
+              <li>Lodging & ryokans — $6,200</li>
+              <li>Train & transfers — $1,000</li>
+              <li>Onsen & wellness experiences — $1,500</li>
+              <li>Two workshops — $1,100 each</li>
+              <li>White‑glove concierge & hosting — $20,000</li>
+            </ul>
+            <p class="value-total">Estimated total value — <strong>$30,000+</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Reservation form section -->
+    <!-- Reserve form section -->
     <section id="reserve" class="section reserve-section">
-      <div class="container reserve-container">
+      <div class="container">
         <h2 class="section-heading">Reserve Your Spot</h2>
-        <p class="section-subheading">Submit your details below and our team will be in touch within 24 hours.</p>
+        <p class="reserve-note">
+          Two Kamakura nights are at Sakura Sakura—an intimate heritage home
+          with only three rooms reserved entirely for our group.
+        </p>
         <form class="reserve-form">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address" required />
-          <select id="journey-select">
-            <option value="journey1">Journey 1</option>
-            <option value="journey2">Journey 2</option>
-            <option value="journey3">Journey 3</option>
+          <label for="tier-select">Selected Tier</label>
+          <select id="tier-select" name="tier-select">
+            <option value="tier1">Tier 1 — $7,600</option>
+            <option value="tier2">Tier 2 — $10,100</option>
+            <option value="tier3">Tier 3 — $12,400</option>
           </select>
-          <textarea rows="4" placeholder="Tell us about your intentions or questions…"></textarea>
-          <button type="submit" class="btn primary-btn">Submit Inquiry</button>
-          <button type="button" id="payment-button" class="btn secondary-btn">Pay Deposit</button>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Your name" />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn">Send Inquiry</button>
+            <button type="submit" class="btn primary-btn">Proceed to Secure Deposit (Podia)</button>
+          </div>
         </form>
       </div>
     </section>
 
+    <!-- Footer with citations -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footnote">
+          <strong>Citations:</strong>
+          <a href="#cite1" id="cite1-ref">[1]</a>
+          <a href="#cite2" id="cite2-ref">[2]</a>
+          <a href="#cite3" id="cite3-ref">[3]</a>
+          <a href="#cite4" id="cite4-ref">[4]</a>
+        </p>
+        <ol class="citation-list">
+          <li id="cite1">
+            Forest bathing, or <em>shinrin‑yoku</em>, originated in Japan and is shown to
+            improve cardiovascular and immune health while lowering cortisol and
+            increasing mood and creativity【28705490375020†L387-L419】.
+          </li>
+          <li id="cite2">
+            Japanese hot springs are rich in minerals that offer different
+            health benefits; all hot springs are believed to have a relaxing
+            effect on body and mind【654498561893934†L28-L37】.
+          </li>
+          <li id="cite3">
+            Beppu, Japan’s onsen capital, boasts eight different springs and offers
+            sand, steam and mud baths in addition to conventional baths【751175373135778†L49-L60】.
+          </li>
+          <li id="cite4">
+            Iwaso Ryokan on Miyajima has provided first‑class hospitality since
+            1854 and offers serene outdoor baths and private in‑room kaiseki
+            meals【652895566235836†L101-L110】.
+          </li>
+        </ol>
+        <small>&copy; 2025 Rest as Resistance • A Dr. Dédé Healing Journey</small>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
