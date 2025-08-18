@@ -619,3 +619,48 @@ a:hover {
     justify-content: flex-start;
   }
 }
+
+/* === DFY: Gradient card + gold outline (Aug 2025) === */
+.tier-card, .itinerary-item, .experience-card, .inclusion-card, .value-panel, .faq-item, .testimonial-card {
+  border: 1px solid rgba(212,166,64,.46);
+  background-image: linear-gradient(160deg, rgba(244,193,93,0.07), rgba(20,16,28,0.18));
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  border-radius: 12px;
+}
+
+/* Hero title slightly smaller so it fits on one line on desktop */
+.hero-title { font-size: clamp(2rem, 5.5vw, 3.05rem); line-height: 1.1; }
+
+/* Galleries: images constrained to card width; prevent overflow */
+.senanu-gallery, .host-gallery { align-items: stretch; }
+.senanu-gallery img, .host-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+
+/* Add-on section: right-justify text with image left */
+.addons-section .container { display: grid; grid-template-columns: 320px 1fr; gap: 1.2rem; align-items: start; }
+@media (max-width: 900px){ .addons-section .container { grid-template-columns: 1fr; } }
+.addons-image-placeholder {
+  background: url('images/miyajima.jpg') center/cover no-repeat;
+  border: 1px solid rgba(212,166,64,.35);
+  border-radius: 12px; min-height: 220px;
+}
+
+/* Value section: center vertically and add spacing before CTA */
+.value-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 900px){ .value-panels { grid-template-columns: 1fr; } }
+.breakdown-panel { display:flex; flex-direction:column; justify-content:center; }
+.value-total { margin-bottom: .95rem; }
+
+/* FAQ: add down arrows */
+details.faq-item > summary { position: relative; padding-right: 1.5rem; list-style: none; }
+details.faq-item > summary::after {
+  content: '▾'; position: absolute; right: .25rem; top: 0; color:#f4c15d; font-weight:700;
+}
+
+/* Mobile hero responsiveness */
+@media (max-width: 640px){
+  .hero-section { min-height: 60vh; padding-top: 4.5rem; }
+  .hero-title { font-size: 2rem !important; }
+  .hero-dates { font-size: 1.05rem !important; }
+  .hero-subtitle { font-size: .98rem !important; }
+}
+
