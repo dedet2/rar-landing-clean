@@ -838,3 +838,20 @@ details.faq-item > summary::after {
   .hero-subtitle { font-size: 0.85rem !important; }
 }
 
+/* Pricing list styling for the FAQ pricing breakdown */
+.pricing-list,
+.pricing-list ul {
+  font-size: 0.85rem;
+  margin-left: 1.2rem;
+  line-height: 1.4;
+  list-style-type: disc;
+}
+
+.pricing-list > li {
+  margin-bottom: 0.7rem;
+}
+
+.pricing-list strong {
+  font-weight: 600;
+}
+
