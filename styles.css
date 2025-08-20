@@ -256,6 +256,24 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* Price notes: smaller text and muted colour for after‑deadline pricing */
+.price-note {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-left: 0.3rem;
+  color: #cbb0e0;
+}
+
+/* Pricing note below the pricing subheading */
+.pricing-note {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 0.5rem auto 1.5rem auto;
+  text-align: center;
+  opacity: 0.9;
+}
+
 .tier-actions {
   display: flex;
   gap: 0.5rem;
@@ -663,7 +681,8 @@ a:hover {
     flex-direction: column;
   }
   .host-gallery {
-    justify-content: flex-start;
+    /* Center align host images on mobile for a balanced layout */
+    justify-content: center;
   }
 }
 
