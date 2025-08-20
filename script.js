@@ -93,9 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
           nameInput.value = '';
           emailInput.value = '';
         } else {
-          inquiryBtn.disabled = false;
-          inquiryBtn.textContent = originalText;
-          alert(data.error || 'There was an issue sending your inquiry. Please try again.');
+          // If SendGrid is not configured, gracefully fall back to mailto link
+          const err = data && data.error ? String(data.error) : '';
+          if (err.includes('SENDGRID_API_KEY')) {
+            // Compose a mailto link with subject and body prefilled
+            const subject = encodeURIComponent(`RAR Retreat Inquiry — ${tierName}`);
+            const body = encodeURIComponent(`Selected Tier: ${tierName}\nName: ${name}\nEmail: ${email}`);
+            window.location.href = `mailto:info@incluu.us?subject=${subject}&body=${body}`;
+            inquiryBtn.disabled = false;
+            inquiryBtn.textContent = originalText;
+          } else {
+            inquiryBtn.disabled = false;
+            inquiryBtn.textContent = originalText;
+            alert(err || 'There was an issue sending your inquiry. Please try again.');
+          }
         }
       } catch (err) {
         inquiryBtn.disabled = false;
