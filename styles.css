@@ -206,13 +206,23 @@ a:hover {
 }
 
 .time-box span {
-  font-size: 1.5rem;
+  /* Increase countdown digit size for better visibility */
+  font-size: 2.4rem;
   font-weight: 600;
 }
 
 .time-box small {
+  font-size: 0.85rem;
+  display: block;
+}
+
+/* Smaller font for early‑bird disclaimer */
+.earlybird-note {
+  /* Reduce font size for the disclaimer beneath the early‑bird headline */
   font-size: 0.75rem;
   display: block;
+  margin-top: 0.3rem;
+  opacity: 0.9;
 }
 
 /* Tier cards */
@@ -265,6 +275,23 @@ a:hover {
   font-size: 0.75rem;
   margin-top: 0.5rem;
   opacity: 0.8;
+}
+
+/* Price note styling for the tier prices after the early‑bird period */
+.price-note {
+  font-size: 0.8rem;
+  color: #d6af5c;
+  margin-left: 0.25rem;
+}
+
+/* Pricing note under the Choose Your Rest Journey heading */
+.pricing-note {
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  color: #f4c15d;
 }
 
 /* Itinerary */
@@ -413,6 +440,20 @@ a:hover {
   list-style: disc inside;
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+/* Add‑ons section headers styling */
+/* Category headings in the add‑ons list */
+.addons-category {
+  color: #f4c15d;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add a gap between successive categories */
+.inclusion-card ul + .addons-category {
+  margin-top: 1.25rem;
 }
 
 /* Value section */
@@ -644,6 +685,17 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+/* Smaller font for the early‑bird reminder in the reserve section */
+.reserve-note-small {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-title {
@@ -655,9 +707,11 @@ a:hover {
   .hero-subtitle {
     font-size: 0.9rem;
   }
+  /* Keep the countdown aligned to the right on smaller screens by maintaining a row layout */
   .earlybird-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .value-container {
     flex-direction: column;
@@ -732,14 +786,22 @@ a:hover {
 
 /* Add‑on section: arrange the image and details side by side. The first
    column has been widened to accommodate a larger photo, as requested. */
-.addons-grid { display: grid; grid-template-columns: 420px 1fr; gap: 1.2rem; align-items: start; }
+.addons-grid {
+  display: grid;
+  /* Give equal space to image and details so the photo matches the card height */
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
 @media (max-width: 900px){ .addons-grid { grid-template-columns: 1fr; } }
 .addons-image-placeholder {
   /* Updated to the ryokan view photo for the add‑ons section. */
   background: url('images/view-from-ryokan.png') center/cover no-repeat;
   border: 1px solid rgba(212,166,64,.35);
   border-radius: 12px;
-  min-height: 250px;
+  /* Increase height to better match the card's proportions */
+  min-height: 350px;
+  height: 100%;
 }
 
 /* Increase card padding in Journey Add‑ons for better readability */
