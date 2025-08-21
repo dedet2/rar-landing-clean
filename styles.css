@@ -866,3 +866,20 @@ details.faq-item > summary::after {
   font-weight: 600;
 }
 
+/* FAQ list styling for arrival/departure breakdown */
+.faq-list,
+.faq-list ul {
+  font-size: 0.85rem;
+  margin-left: 1.2rem;
+  line-height: 1.4;
+  list-style-type: disc;
+}
+
+.faq-list > li {
+  margin-bottom: 0.7rem;
+}
+
+.faq-list strong {
+  font-weight: 600;
+}
+
