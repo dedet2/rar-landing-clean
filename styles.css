@@ -533,9 +533,19 @@ a:hover {
 }
 
 /* Constrain FAQ width and left‑justify content */
+/* Constrain FAQ width and center the FAQ container */
+/*
+ * FAQ list container
+ * Center the entire FAQ list on the page and allow the body text to be left‑aligned within
+ * the container. Using auto margins horizontally centers the box, while a max width
+ * prevents lines from becoming too long. The list itself remains left‑aligned for
+ * comfortable reading, but you can switch to `text-align: justify` if you prefer fully
+ * justified paragraphs.
+ */
 .faq-list {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
 }
 
@@ -863,6 +873,23 @@ details.faq-item > summary::after {
 }
 
 .pricing-list strong {
+  font-weight: 600;
+}
+
+/* FAQ details list styling for arrival/departure breakdown */
+.faq-details-list,
+.faq-details-list ul {
+  font-size: 0.85rem;
+  margin-left: 1.2rem;
+  line-height: 1.4;
+  list-style-type: disc;
+}
+
+.faq-details-list > li {
+  margin-bottom: 0.7rem;
+}
+
+.faq-details-list strong {
   font-weight: 600;
 }
 
