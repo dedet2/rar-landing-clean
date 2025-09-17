@@ -14,7 +14,11 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Missing required fields.' });
   }
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-  const toEmail = process.env.INQUIRY_TO || 'info@incluu.us';
+  const toList = (process.env.INQUIRY_TO || 'rar@dr-dede.com,info@incluu.us')
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(email => ({ email }));
   const fromEmail = process.env.INQUIRY_FROM || 'info@incluu.us';
   if (!SENDGRID_API_KEY) {
     return res.status(500).json({ ok: false, error: 'Missing SENDGRID_API_KEY' });
@@ -22,7 +26,7 @@ export default async function handler(req, res) {
   const payload = {
     personalizations: [
       {
-        to: [ { email: toEmail } ],
+        to: toList,
         subject: `RAR Retreat Inquiry — ${tier}`
       }
     ],
