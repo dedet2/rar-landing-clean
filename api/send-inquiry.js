@@ -14,12 +14,12 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Missing required fields.' });
   }
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-  const toList = (process.env.INQUIRY_TO || 'rar@dr-dede.com,info@dr-dede.com')
+  const toList = (process.env.INQUIRY_TO || 'rar@dr-dede.com')
     .split(',')
     .map(s => s.trim())
     .filter(Boolean)
     .map(email => ({ email }));
-  const fromEmail = process.env.INQUIRY_FROM || 'rar@dr-dede.com,info@dr-dede.com';
+  const fromEmail = process.env.INQUIRY_FROM || 'info@dr-dede.com';
   if (!SENDGRID_API_KEY) {
     return res.status(500).json({ ok: false, error: 'Missing SENDGRID_API_KEY' });
   }
