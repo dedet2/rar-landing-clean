@@ -77,7 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Compose a mailto link with subject and body prefilled
             const subject = encodeURIComponent(`RAR Retreat Inquiry — ${tierName}`);
             const body = encodeURIComponent(`Selected Tier: ${tierName}\nName: ${name}\nEmail: ${email}`);
-            window.location.href = `mailto:info@incluu.us?subject=${subject}&body=${body}`;
+            const mailto = (data && data.url)
+                ? data.url
+                : `mailto:rar@dr-dede.com,info@dr-dede.com?subject=${subject}&body=${body}`;
+            window.location.href = mailto;
             inquiryBtn.disabled = false;
             inquiryBtn.textContent = originalText;
           } else {
