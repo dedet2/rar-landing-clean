@@ -6,9 +6,9 @@ export default async function handler(req, res) {
   if (honeypot) return res.status(200).json({ ok: true });
   if (!tier || !name || !email) return res.status(400).json({ ok: false, error: 'Missing required fields.' });
 
-  const toList = (process.env.INQUIRY_TO || 'rar@dr-dede.com, info@dr-dede.com')
+  const toList = (process.env.INQUIRY_TO || 'rar@dr-dede.com,info@dr-dede.com')
     .split(',').map(s => s.trim()).filter(Boolean);
-  const fromEmail = process.env.INQUIRY_FROM || 'rar@dr-dede.com, info@dr-dede.com';
+  const fromEmail = process.env.INQUIRY_FROM || 'rar@dr-dede.com,info@dr-dede.com';
 
   const hasGmail =
     process.env.GMAIL_USER &&
